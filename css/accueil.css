@@ -111,7 +111,6 @@ h1 {
   
 /* NAV ****************************/
 nav {   
-  /* visibility: visible; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,23 +143,16 @@ nav ul li a {
 
 /* Styles btn hamburger */
 .hamburger-menu {
-  visibility: visible;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
+  display: none;
 }
 .hamburger-icon { 
   scale: 2;
-  width: 30px;
-  position: relative;
+  /* position: relative; */
 }
 .hamburger-icon span {
-  display: block;
-  position: absolute;
+  /* display: block; */
+  /* position: absolute; */
   width: 100%;
-  background: white;
-  border-radius: 3px; 
 }
 
 .hamburger-icon span:nth-child(1) {

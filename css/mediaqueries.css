@@ -49,8 +49,8 @@ nav{
   display: block;
   background: none;
   border: none;  
-  position: sticky; 
-  top: 0; 
+  height: 10vh;
+  
 }
 nav ul {  
   display: none;
@@ -67,22 +67,23 @@ nav ul {
 nav ul li {
   margin: .5rem 0;
 }
-nav ul li a {
+nav ul li a {  
   display: block;
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
 }
-/* .hamburger-menu:focus + ul,
-.hamburger-menu:active + ul {
-  display: flex;
-} */
+
+#mobile-menu{
+  position: fixed;
+  top: 400px;
+}
 .hamburger-menu {
   display: block;
   width: 60px;
   height: 60px;
   position: relative;
-  z-index: -2;
+  /* z-index: -2; */
   cursor: pointer;
   background: none;
   border: none;
@@ -91,7 +92,7 @@ nav ul li a {
   width: 30px;
   height: 20px;
   position: absolute;
-  top: 50%;
+  top: 5vh;
   left: 50vw;
   transform: translate(-100%, -50%);
 }
@@ -100,9 +101,9 @@ nav ul li a {
   position: absolute;
   height: 3px;
   width: 100%;
+  top: 0;
   background: white;
   border-radius: 3px; 
-  opacity: 1;  /**/
 }
 
 /* .hamburger-icon span:nth-child(1) {
