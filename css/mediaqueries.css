@@ -49,6 +49,8 @@ nav{
   display: block;
   background: none;
   border: none;  
+  position: sticky; 
+  top: 0; 
 }
 nav ul {  
   display: none;

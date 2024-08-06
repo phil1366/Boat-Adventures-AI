@@ -121,9 +121,7 @@ nav {
   bottom: 0;  
   z-index: 50;  
   border: 2px solid var(--light-blue);
-  border-radius: 10px; 
-  position: sticky;
-  top: 30px;
+  border-radius: 10px;   
 }
 nav ul {
   display: flex;
