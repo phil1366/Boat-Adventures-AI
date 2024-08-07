@@ -6,7 +6,6 @@
   --light-blue: #87CEEB;
   --medium-blue: #4a90e2;
   --dark-blue: #043b7a;
-
 }
 
 body {
@@ -18,6 +17,88 @@ body {
   color: var(--text-color);
   box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Banniere header *******************/
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 50px;
+  width: 100%;  
+  position: relative;
+} 
+.logo_titre{
+  display: flex;
+  align-items: center;
+}
+.hero-content {  
+  margin-top: -50px;
+  z-index: 2;
+}
+.hero-content .logo {   /* gouvernail */
+  width: calc(6vw + 25px);   
+  position: relative;
+  top: -1vh;
+  right: 2vw;
+}
+
+/* NAV ****************************/
+nav {   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(52, 152, 219, 0.9);
+  height: 100px;
+  width: 100%;    
+  bottom: 0;  
+  z-index: 50;  
+  border: 2px solid var(--light-blue);
+  border-radius: 10px;   
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+nav ul li {
+  margin: 0 1rem;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: calc(.4vw + 20px) !important; 
+  transition: color 0.3s ease;
+} 
+
+/* Styles btn hamburger */
+.hamburger-menu {
+  display: none;
+}
+.hamburger-icon { 
+  scale: 2;
+  /* position: relative; */
+}
+.hamburger-icon span {
+  /* display: block; */
+  /* position: absolute; */
+  width: 100%;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0px;
+}
+.hamburger-icon span:nth-child(2) {
+  top: 8px;
+}
+.hamburger-icon span:nth-child(3) {
+  top: 16px;
 }
 
 /* Scroll to top ********************/
@@ -40,11 +121,10 @@ body {
 }
 #scroll-to-top:hover {
   background-color: var(--secondary-color);
-}
-  
+}  
   
 footer {
-  background: var(--secondary-color);
+  background: #3498db !important;
   color: white;
   text-align: center;
   padding:  1rem;

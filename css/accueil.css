@@ -6,6 +6,7 @@
   align-items: flex-start;
   padding: 80px 50px;
   width: 100%;  
+  height: auto;
   position: relative;
 } 
 .hero-content {  
@@ -48,14 +49,14 @@ h1 {
 /* CTA ***********************/
 .cta-button {    
   color: var(--secondary-color);
-  padding: .5rem 1rem;
+  padding: .2rem 1rem;
   border: 3px solid var(--medium-blue);
   border-radius: 15px;
   font-size: calc(.5vw + 15px); 
   font-weight: 600;
   cursor: pointer;
-  z-index: 2;  
-  margin-top: 2rem;
+  z-index: 2;    
+  margin-top: 7rem;
   margin-bottom: 4rem;
 }
 .cta-button:hover { 
@@ -67,6 +68,7 @@ h1 {
   margin-left: 14px;
   position: relative;
   top: -20%;
+  padding: 10px;
 }
 .cta-button svg {
   width: 30px; 
@@ -83,7 +85,6 @@ h1 {
   width: 500%;
   height: 100%;
   animation: slideShow 50s infinite; /* Changed to 50s for 10 seconds per image */
-
 }
 .hero-gallery img {  
   width: 20%;
@@ -107,65 +108,9 @@ h1 {
   100% {
       transform: translateX(-80%);
   }
-}
-  
-/* NAV ****************************/
-nav {   
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(52, 152, 219, 0.9);
-  height: 100px;
-  width: 100%;    
-  bottom: 0;  
-  z-index: 50;  
-  border: 2px solid var(--light-blue);
-  border-radius: 10px;   
-}
-nav ul {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-nav ul li {
-  margin: 0 1rem;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: calc(.4vw + 20px) !important; 
-  transition: color 0.3s ease;
 }  
 
-/* Styles btn hamburger */
-.hamburger-menu {
-  display: none;
-}
-.hamburger-icon { 
-  scale: 2;
-  /* position: relative; */
-}
-.hamburger-icon span {
-  /* display: block; */
-  /* position: absolute; */
-  width: 100%;
-}
-
-.hamburger-icon span:nth-child(1) {
-  top: 0px;
-}
-.hamburger-icon span:nth-child(2) {
-  top: 8px;
-}
-.hamburger-icon span:nth-child(3) {
-  top: 16px;
-}
-  
-  /* Main ******************/
+/* Main ******************/
   main {
     max-width: 1200px;
     margin: 0 auto;

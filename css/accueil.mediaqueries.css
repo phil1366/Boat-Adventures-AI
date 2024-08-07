@@ -6,10 +6,10 @@
   font-size: calc(2vw + 5px);
 }    
 .cta-button {      
-  font-size: calc(1.5vw + 8px) !important;     
+  font-size: calc(1.5vw + 8px) !important;  
 }   
 .cta-button .icon-wrapper {
-  padding: 5px;
+  padding: 3px;
 }
 
 /* NAV ****************************/       
@@ -24,6 +24,7 @@ nav ul li a {
 @media (min-width: 375px) and (max-width: 767px) {
 .logo_titre {  
   justify-content: center; 
+  margin-top: -10vh;
 } 
 h1 {
   -webkit-text-stroke: 1px var(--light-blue); 
@@ -37,11 +38,11 @@ h1 {
   margin-bottom: 5%;
 }  
 .cta-button {
-  margin: 0 auto 2rem;
+  margin: 80px auto 2rem;
   transform: translateX(2vw);
 }
-.cta-button .icon-wrapper {
-  padding: 3px;
+.cta-button .icon-wrapper svg{
+  scale: 1.4;
 }
 
 /* NAV ****************************/
@@ -49,8 +50,7 @@ nav{
   display: block;
   background: none;
   border: none;  
-  height: 10vh;
-  
+  height: 10vh;  
 }
 nav ul {  
   display: none;
@@ -72,6 +72,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 #mobile-menu{
