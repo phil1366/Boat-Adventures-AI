@@ -5,38 +5,39 @@
   justify-content: center;
   align-items: flex-start;
   padding: 80px 50px;
-  width: 100%;  
+  width: 100%;
   height: auto;
   position: relative;
-} 
-.hero-content-accueil {  
+}
+.hero-content-accueil {
   margin-top: -50px;
   z-index: 2;
 }
-.hero-content-accueil .logo {   /* gouvernail */
-  width: calc(8vw + 25px);   
+.hero-content-accueil .logo {
+  /* gouvernail */
+  width: calc(8vw + 25px);
   position: relative;
   top: -1vh;
   right: 2vw;
 }
-.logo_titre{
+.logo_titre {
   display: flex;
   align-items: center;
 }
 
-h1 {      
-  font-size: calc(4vw + 10px); 
-  -webkit-text-stroke: 2px var(--light-blue);  
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
-  position: relative;  
-  right: 2vw;  
+h1 {
+  font-size: calc(4vw + 10px);
+  -webkit-text-stroke: 2px var(--light-blue);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  right: 2vw;
 }
 .hero-text {
   background-color: rgba(52, 152, 219, 0.8);
   color: white;
   padding: 1.5rem;
   border-radius: 5px;
-  font-size: calc(.7vw + 15px); 
+  font-size: calc(0.7vw + 15px);
   width: 100%;
   max-width: none;
   text-align: left;
@@ -44,27 +45,27 @@ h1 {
   z-index: 1;
   line-height: 1.6;
   border: 2px solid var(--light-blue);
-} 
+}
 
 /* CTA ***********************/
-.cta-button {    
+.cta-button {
   display: flex;
   align-items: center;
   color: var(--secondary-color);
-  padding: .2rem 1rem;
+  padding: 0.2rem 1rem;
   border: 3px solid var(--medium-blue);
   border-radius: 15px;
-  font-size: calc(.5vw + 15px); 
+  font-size: calc(0.5vw + 15px);
   font-weight: 600;
   cursor: pointer;
-  z-index: 2;    
+  z-index: 2;
   margin-top: 2rem;
   margin-bottom: 4rem;
   max-height: 8vh;
 }
-.cta-button:hover { 
+.cta-button:hover {
   transform: scale(1.05);
-}  
+}
 .cta-button .icon-wrapper {
   display: flex;
   border-radius: 50%;
@@ -76,99 +77,101 @@ h1 {
   height: 5vh;
 }
 .cta-button svg {
-  width: 30px; 
-  height: calc(.7vw + 10px);
+  width: 30px;
+  height: calc(0.7vw + 10px);
   fill: white;
-  padding-top: .2vh;
+  padding-top: 0.2vh;
 }
 
 /* gallery ***********************/
 .hero-gallery {
   display: flex;
   position: absolute;
-  top: 0;  
+  top: 0;
   left: 0;
   width: 500%;
   height: 100%;
   animation: slideShow 50s infinite; /* Changed to 50s for 10 seconds per image */
 }
-.hero-gallery img {  
+.hero-gallery img {
   width: 20%;
   object-fit: cover;
 }
 
 /* Animation gallery *************************/
 @keyframes slideShow {
-  0%, 20% {
-      transform: translateX(0);
+  0%,
+  20% {
+    transform: translateX(0);
   }
-  25%, 45% {
-      transform: translateX(-20%);
+  25%,
+  45% {
+    transform: translateX(-20%);
   }
-  50%, 70% {
-      transform: translateX(-40%);
+  50%,
+  70% {
+    transform: translateX(-40%);
   }
-  75%, 95% {
-      transform: translateX(-60%);
+  75%,
+  95% {
+    transform: translateX(-60%);
   }
   100% {
-      transform: translateX(-80%);
+    transform: translateX(-80%);
   }
-}  
-
-#mobile-menu{
-  background-color: rgba(52, 152, 219, 0.8);
-  border: 2px solid var(--light-blue);  
-  width: 100vw;
-  height: 10vh;
-  border-radius: 8px;
 }
 
-/* Main ******************/
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  .river-list, .boat-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-  
-  .river-card, .boat-card {
-    width: calc(33.33% - 1rem);
-    margin-bottom: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .river-card:hover, .boat-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .river-card img, .boat-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .river-card h3, .boat-card h3 {
-    padding: 1rem;
-    margin: 0;
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 1.5rem; /* Augmentation de la taille de la police */
-  }
 
-  
-  .river-card, .boat-card {
-    width: calc(50% - 1rem);
-  }
-  
+
+/* Main ******************/
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.river-list,
+.boat-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.river-card,
+.boat-card {
+  width: calc(33.33% - 1rem);
+  margin-bottom: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.river-card:hover,
+.boat-card:hover {
+  transform: translateY(-10px);
+}
+
+.river-card img,
+.boat-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.river-card h3,
+.boat-card h3 {
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.5rem; /* Augmentation de la taille de la police */
+}
+
+.river-card,
+.boat-card {
+  width: calc(50% - 1rem);
+}
