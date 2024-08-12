@@ -17,11 +17,15 @@
   }
 
   /* NAV ****************************/
+  nav ul li {
+    margin: 0 .5rem;
+  }
   nav ul li a {
+    flex-wrap: wrap;
     white-space: nowrap;
     font-size: calc(2.4vw + 10%) !important;
   }
-}
+  }
 
 /*******************************/
 /*******************************/
@@ -77,67 +81,10 @@
     font-size: 1.2rem;
     line-height: 1.6;
   }
-
-  #menu {
-    position: fixed;
-    top: 400px;
-  }
-  .hamburger-menu {
+  .burger-menu-button{
     display: block;
-    width: 60px;
-    height: 60px;
-    position: relative;
-    /* z-index: -2; */
-    cursor: pointer;
-    background: none;
-    border: none;
+    scale: 2;
   }
-  .hamburger-icon {
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    top: 5vh;
-    left: 50vw;
-    transform: translate(-100%, -50%);
-  }
-  .hamburger-icon span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    top: 0;
-    background: white;
-    border-radius: 3px;
-  }
-
-  /* .hamburger-icon span:nth-child(1) {
-  top: 0px;
-}
-.hamburger-icon span:nth-child(2) {
-  top: 8px;
-}
-.hamburger-icon span:nth-child(3) {
-  top: 16px;
-} */
-
-  /* Utilisation du :target pour afficher/masquer le menu */
-  #menu:target {
-    display: block;
-  }
-  /* 
-#menu:target + .hamburger-menu .hamburger-icon span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 8px;
-}
-
-#menu:target + .hamburger-menu .hamburger-icon span:nth-child(2) {
-  opacity: 0;
-}
-
-#menu:target + .hamburger-menu .hamburger-icon span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 8px;
-} */
 
   /*******************************/
 
@@ -145,4 +92,5 @@
   .boat-card {
     width: 100%;
   }
+
 }

@@ -13,8 +13,7 @@
   margin-top: -50px;
   z-index: 2;
 }
-.hero-content-accueil .logo {
-  /* gouvernail */
+.hero-content-accueil .logo {  /* gouvernail */
   width: calc(8vw + 25px);
   position: relative;
   top: -1vh;
@@ -121,13 +120,15 @@ h1 {
   }
 }
 
-
-
 /* Main ******************/
 main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+#fleuves h2, #bateaux h2{
+  text-align: center;
 }
 
 .river-list,
@@ -149,19 +150,16 @@ main {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-
 .river-card:hover,
 .boat-card:hover {
   transform: translateY(-10px);
 }
-
 .river-card img,
 .boat-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-
 .river-card h3,
 .boat-card h3 {
   padding: 1rem;
@@ -170,8 +168,9 @@ main {
   color: var(--primary-color);
   font-size: 1.5rem; /* Augmentation de la taille de la police */
 }
-
 .river-card,
 .boat-card {
   width: calc(50% - 1rem);
 }
+
+

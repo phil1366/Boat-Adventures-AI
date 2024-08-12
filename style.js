@@ -1,13 +1,24 @@
-// document.querySelector('.hamburger-menu').addEventListener('click', function() {
-//   const navUl = document.querySelector('nav ul');
-//   if (navUl.style.display === 'flex') {
-//     navUl.style.display = 'none';
-//   } else {
-//     navUl.style.display = 'flex';
-//   }
-// });
+// Menu burger
+const burgerMenuBtn = document.querySelector('.burger-menu-button')
+const burgerMenuBtnIcon = document.querySelector('.burger-menu-button i')
+const burgerMenu = document.querySelector('.burger-menu')
+
+burgerMenuBtn.onclick = function () {
+    burgerMenu.classList.toggle('open') 
+    const isOpen = burgerMenu.classList.contains('open')
+    burgerMenuBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+}
 
 
+// Ajout de la gestion de la galerie photos
+const galleryLink = document.querySelector('a[data-target="gallery"]');
+const photoGallery = document.getElementById('photo-gallery');
+
+galleryLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    contentArea.querySelectorAll('> div').forEach(div => div.classList.add('hidden'));
+    photoGallery.classList.remove('hidden');
+});
 
 
 // Scroll to top button
