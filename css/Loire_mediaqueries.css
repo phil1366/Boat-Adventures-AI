@@ -1,67 +1,52 @@
 
 /*********************/
 @media (min-width: 375px) and (max-width: 767px) {
-    .hamburger-menu {
-        display: block;
-        width: 400px;
-        height: 500px;
-        position: relative;
-        z-index: 1000;
-        cursor: pointer;
-    }
+nav{
+    display: none;
+}
+.h1-Loire{
+    font-size: calc(4vw + 10px) !important; 
+}
 
-    .hamburger-icon {
-        width: 30px;
-        height: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+/* Burger *****************/
+.hamburger-menu {
+    display: block;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+}
+.hamburger-icon {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.hamburger-icon span:nth-child(1) {
+    top: 0px;
+}
+.hamburger-icon span:nth-child(2) {
+    top: 8px;
+}
+.hamburger-icon span:nth-child(3) {
+    top: 16px;
+}
 
-    .hamburger-icon span {
-        display: block;
-        position: absolute;
-        height: 3px;
-        width: 100%;
-        background: white;
-        border-radius: 3px;
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
-        transition: .25s ease-in-out;
-    }
-
-    .hamburger-icon span:nth-child(1) {
-        top: 0px;
-    }
-
-    .hamburger-icon span:nth-child(2) {
-        top: 8px;
-    }
-
-    .hamburger-icon span:nth-child(3) {
-        top: 16px;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--secondary-color);
-    }
-
-    nav ul li {
-        margin: 1rem 0;
-    }
-
-    .hamburger-menu:focus + ul,
-    .hamburger-menu:active + ul {
-        display: flex;
-    }
 
     .river-info {
         grid-template-columns: 1fr;

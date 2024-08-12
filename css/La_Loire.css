@@ -5,19 +5,18 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: center;    
     background-color: rgb(67, 64, 64);
     color: white;
     text-align: center;
     padding: 1rem;
-    height: 10%;
-}
-header{
-    display: flex;
-    justify-content: center;    
+    height: 20%;
 }
 .hero-content{
-    /* border: solid 5px red;     */
-    transform: translateY(25%);   
+    display: flex;
+    transform: translateY(4vh);    
+    /* border: solid 5px red; */
 }
 .hero-content .logo {
     left: .5vw;
@@ -26,11 +25,19 @@ header{
     letter-spacing: 2px;
 }
 
-nav {
-    background-color: var(--secondary-color);
-    padding: 1rem;
+/* Nav *********************/
+#mobile-menu-loire{
+    background-color: rgba(52, 152, 219, 0.8);
+    border: 2px solid var(--light-blue);  
+    border-radius: 10px;
+    width: 80%;
+    height: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
 }
-
+nav {
+    /* padding: 1rem; */
+}
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -38,7 +45,6 @@ nav ul {
     display: flex;
     justify-content: center;
 }
-
 nav ul li {
     margin: 0 1rem;
 }
@@ -47,12 +53,17 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    white-space: nowrap;
 }
 
+/* Main *********************/
 main {
+    background-image: url("../src/images/Bateau\ naviguant\ sur\ un\ fleuve\ européen.png") no-repeat;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    z-index: 10;
 }
 
 .river-info {
