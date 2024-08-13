@@ -12,6 +12,7 @@
 
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/La_Loire.css">
+  <link rel="stylesheet" href="/css/Loire_mediaqueries.css">
   <title>La Loire</title>
 </head>
 
@@ -19,28 +20,25 @@
 
   <header>
     <div class="hero-content">
+      <div class="burger-menu-button">
+       <i class="fa-solid fa-bars"></i>
+     </div>
       <div class="logo_titre">
         <img src="../src/images/gouvernail.png" alt="icone gouvernail" class="logo">
         <h1 class="h1-Loire">La Loire</h1>
       </div>
     </div>
+    <!-- Menu burger -->
   </header>
-
-  <nav>
-    <button class="hamburger-menu" aria-label="Menu de navigation" tabindex="0">
-      <div class="hamburger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-
-    <ul id="menu-loire">
-      <li><a href="/html/index.html">Accueil</a></li>
-      <li><a href="./#fleuves">Nos Fleuves</a></li>
-      <li><a href="./#bateaux">Nos Bateaux</a></li>
-      <li><a href="https://destinations.html/index.html/reservation">Réservations</a></li>
-      <li><a href="https://destinations.html/index.html/contact">Contact</a></li>
+  
+  <nav>    
+    <ul id="menu">
+      <li><a href="../html/accueil.html">Accueil</a></li>
+      <li><a href="../html/accueil.html#fleuves">Nos Fleuves</a></li>
+      <li><a href="../html/accueil.html#bateaux">Nos Bateaux</a></li>
+      <li><a href="../html/souvenirs.html">Souvenirs</a></li>
+      <li><a href="../html/reservations.html">Réservations</a></li>
+      <li><a href="../html/contact.html">Contact</a></li>
     </ul>
   </nav>
 
@@ -68,20 +66,22 @@
     </div>
 
     <div class="highlights">
-      <h2>Points forts de la croisière sur la Loire</h2>
-      <ul>
-        <li>Visite des châteaux emblématiques : Chambord, Chenonceau, Amboise</li>
-        <li>Dégustation de vins dans les célèbres vignobles de Sancerre et Vouvray</li>
-        <li>Exploration des villes historiques de Tours et Orléans</li>
-        <li>Découverte de la gastronomie régionale et des marchés locaux</li>
-        <li>Observation de la faune et la flore uniques des bords de Loire</li>
-        <li>Balade à vélo le long des pistes cyclables "Loire à Vélo"</li>
-      </ul>
+      <div class="cruising">
+        <h2>Points forts de la croisière sur la Loire</h2>
+        <ul>
+          <li>Visite des châteaux emblématiques : Chambord, Chenonceau, Amboise</li>
+          <li>Dégustation de vins dans les célèbres vignobles de Sancerre et Vouvray</li>
+          <li>Exploration des villes historiques de Tours et Orléans</li>
+          <li>Découverte de la gastronomie régionale et des marchés locaux</li>
+          <li>Observation de la faune et la flore uniques des bords de Loire</li>
+          <li>Balade à vélo le long des pistes cyclables "Loire à Vélo"</li>
+        </ul>
+      </div>
+      <img src="../src/images/La_Loire/panorama-paysage-de-loire.jpg" alt="paysage-de-loire">
     </div>
 
-    <div class="cta">
-      <a href="https://destinations.html/index.html/reservation?fleuve=loire" class="btn">Réserver votre croisière sur
-        la Loire</a>
+    <div class="cta-resa-loire">
+      <a href="../html/reservations.html" class="btn"><span>Réserver votre croisière sur la Loire</span></a>
     </div>
   </main>
 
@@ -89,9 +89,19 @@
 
   <footer>
     <p>&copy; 2024 Boating Adventures. Tous droits réservés.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/boatingadventures" target="_blank" rel="noopener noreferrer"
+        aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/boatingadventures" target="_blank" rel="noopener noreferrer"
+        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/boatingadv" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
+          class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com/boatingadventures" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+          class="fab fa-youtube"></i></a>
+    </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/style.js"></script>
 
 </body>
 

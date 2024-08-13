@@ -1,58 +1,71 @@
+@media (min-width: 768px) and (max-width: 992px) {
+#menu li a{
+    white-space: nowrap;
+    font-size: calc(3vw - 20%) !important;     
+}
+}
 
-/*********************/
+/*************************/
+/*************************/
 @media (min-width: 375px) and (max-width: 767px) {
+.logo_titre img{
+    scale: 1.2;
+}
+.logo_titre h1{
+    font-size: 2.3rem;
+}
+
 nav{
     display: none;
 }
-.h1-Loire{
-    font-size: calc(4vw + 10px) !important; 
-}
 
 /* Burger *****************/
-.hamburger-menu {
-    display: block;
-    width: 400px;
-    height: 500px;
-    position: relative;
-    z-index: 1000;
-    cursor: pointer;
-}
-.hamburger-icon {
-    width: 30px;
-    height: 20px;
+.burger-menu-button{
+    display: block; 
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 19rem;
+    top: 4.5vh;
 }
-.hamburger-icon span {
-    display: block;
-    position: absolute;
-    height: 3px;
+
+/* Fleuves ************************/
+.river-info {
+    grid-template-columns: 1fr;
+}
+.river-info h2, .river-info p{
+    text-align: center;
+}
+.river-gallery {
+    grid-template-columns: 1fr;
+}
+
+.highlights{    
+    flex-direction: column;
+}
+.highlights h2{
+    font-size: calc(2vw + 10px); 
     width: 100%;
-    background: white;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    margin: 0 20vw;   
+    text-align: center;
+    padding-bottom: 30px;
 }
-.hamburger-icon span:nth-child(1) {
-    top: 0px;
+.highlights ul{      
+    width: 72vw;
+    margin: 0 auto;
+    margin-bottom: 30px;   
 }
-.hamburger-icon span:nth-child(2) {
-    top: 8px;
-}
-.hamburger-icon span:nth-child(3) {
-    top: 16px;
+.highlights img{
+    width: 100%;    
 }
 
+.cta-resa-loire span{
+    /* border: solid red 5px; */
+    font-size: calc(2vw + .5rem) !important; 
+}
+}
 
-    .river-info {
-        grid-template-columns: 1fr;
-    }
-
-    .river-gallery {
-        grid-template-columns: 1fr;
-    }
+/**********************/
+@media (min-width: 375px) and (max-width: 463px) {
+footer p{
+    font-size: .85rem;
+}
 }

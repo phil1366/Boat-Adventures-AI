@@ -130,17 +130,19 @@ main {
 #fleuves h2, #bateaux h2{
   text-align: center;
 }
+/* .river-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+} */
 
-.river-list,
-.boat-list {
+.river-list, .boat-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 2rem;
 }
-
-.river-card,
-.boat-card {
+.river-card, .boat-card {
   width: calc(33.33% - 1rem);
   margin-bottom: 2rem;
   background-color: white;
@@ -150,27 +152,42 @@ main {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-.river-card:hover,
-.boat-card:hover {
-  transform: translateY(-10px);
+.river-card-content {
+  padding: 1rem;
 }
-.river-card img,
-.boat-card img {
+.river-card:hover, .boat-card:hover {
+  scale: 1.01;
+}
+.river-card img, .boat-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-.river-card h3,
-.boat-card h3 {
+.river-card h2, .boat-card h2 {
   padding: 1rem;
   margin: 0;
   text-align: center;
   color: var(--primary-color);
-  font-size: 1.5rem; /* Augmentation de la taille de la police */
+  font-size: 1.5rem;
 }
-.river-card,
-.boat-card {
+.river-card, .boat-card {
   width: calc(50% - 1rem);
 }
-
-
+.river-card p {
+  margin-bottom: 1rem;
+}
+.btn-plus {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 12vw;
+  background: var(--medium-blue);  
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.btn-plus:hover {
+  color: white;
+}

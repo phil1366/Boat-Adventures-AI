@@ -41,8 +41,7 @@ body {
 .hero-content .logo {   /* gouvernail */
   width: calc(6vw + 25px);   
   position: relative;
-  top: -1vh;
-  right: 2vw;
+  top: -1vh;  
 }
 
 /* NAV ****************************/
@@ -88,14 +87,21 @@ nav ul li a {
 } 
 
 /* burger menu *************/
-.burger-menu-button{
-  display: none; 
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
+.hero-content {
+  position: relative;
 }
-.menu{
-  display: none;  
+.burger-menu-button{
+  display: none;
+  color: #fff;
+  scale: 3;
+  cursor: pointer;
+  position: relative;
+  right: 20rem; 
+  top: 6.5rem; 
+}
+/*
+#menu{
+  display: block;  
   height: 0;
   position: absolute;
   right: 2rem;
@@ -106,29 +112,23 @@ nav ul li a {
   overflow: hidden;
   border-radius: 10px;
   transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+  z-index: 10;
+} */
 
 /* JS ***************/
-.burger-menu.open{
+/* .burger-menu.open{
   height: 310px;
-}
+} */
 /*******************/
 
-.burger-menu li{
+#menu li{
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.7rem;
 }
 
-.buttons-burger-menu{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  white-space: nowrap;
-}
+
 /* fin burger */
 
 /* Scroll to top ********************/
@@ -166,7 +166,7 @@ footer {
   overflow-y: hidden;
 }
 footer p{
-  font-size: calc(2vw + 35%);
+  /* font-size: calc(2vw + 35%); */
   white-space: nowrap;  
 }
 
@@ -174,7 +174,6 @@ footer p{
 .social-links {
   display: flex;
   justify-content: center;
-  margin-top: -2rem;
 }
 .social-links a {
   color: white;

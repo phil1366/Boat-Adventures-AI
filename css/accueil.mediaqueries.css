@@ -5,6 +5,7 @@
   .hero-text {
     font-size: calc(2vw + 5px);
   }
+
   .cta-button {
     font-size: calc(1.5vw + 8px) !important;
   }
@@ -25,6 +26,10 @@
     white-space: nowrap;
     font-size: calc(2.4vw + 10%) !important;
   }
+
+  .btn-plus {    /* en savoir plus */
+    width: 17vw;
+  }
   }
 
 /*******************************/
@@ -44,6 +49,11 @@
     font-size: calc(2vw + 10px);
     margin-bottom: 5%;
   }
+
+  /* CTA **************************/
+  .cta-button .icon-wrapper{
+    width: 37px;
+  }
   .cta-button {
     margin: 30px auto 2rem;
     transform: translateX(2vw);
@@ -52,7 +62,7 @@
     scale: 1.5;
   }
 
-  /* NAV ****************************/
+  /* NAV **************************/
   nav {
     display: block;
     background: none;
@@ -88,9 +98,15 @@
 
   /*******************************/
 
-  .river-card,
-  .boat-card {
+  .river-card, .boat-card {
     width: 100%;
   }
 
+  .btn-plus {    /* en savoir plus */
+    width: 31vw;
+  }
+
+  footer{
+    font-size: calc(2vw + 40%);
+  }
 }
