@@ -39,9 +39,9 @@ body {
   z-index: 2;
 }
 .hero-content .logo {   /* gouvernail */
-  width: calc(6vw + 25px);   
+  width: calc(4vw + 35px);   
   position: relative;
-  top: -1vh;  
+  top: -.5vh;  
 }
 
 /* NAV ****************************/
@@ -82,54 +82,14 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: 400;
-  font-size: calc(.4vw + 20px) !important; 
+  font-size: calc(.4vw + 15px) ; 
   transition: color 0.3s ease;
 } 
 
 /* burger menu *************/
-.hero-content {
-  position: relative;
+#menu-burger, .burger-menu-button{
+   display: none;  
 }
-.burger-menu-button{
-  display: none;
-  color: #fff;
-  scale: 3;
-  cursor: pointer;
-  position: relative;
-  right: 20rem; 
-  top: 6.5rem; 
-}
-/*
-#menu{
-  display: block;  
-  height: 0;
-  position: absolute;
-  right: 2rem;
-  top: 60px;
-  width: 200px;
-  background: rgba(0, 0, 0, .2);
-  backdrop-filter: blur(15px);
-  overflow: hidden;
-  border-radius: 10px;
-  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 10;
-} */
-
-/* JS ***************/
-/* .burger-menu.open{
-  height: 310px;
-} */
-/*******************/
-
-#menu li{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.7rem;
-}
-
-
-/* fin burger */
 
 /* Scroll to top ********************/
 #scroll-to-top {
