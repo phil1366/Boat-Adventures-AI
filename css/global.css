@@ -87,7 +87,7 @@ nav ul li a {
 } 
 
 /* burger menu *************/
-#menu-burger, .burger-menu-button{
+.burger{
    display: none;  
 }
 
