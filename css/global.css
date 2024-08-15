@@ -86,11 +86,6 @@ nav ul li a {
   transition: color 0.3s ease;
 } 
 
-/* burger menu *************/
-.burger{
-   display: none;  
-}
-
 /* Scroll to top ********************/
 #scroll-to-top {
   position: fixed;

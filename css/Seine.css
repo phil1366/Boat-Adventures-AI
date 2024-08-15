@@ -8,7 +8,6 @@ header {
 }
 .hero-content {
     display: flex;
-    /* border: solid 5px red; */
     margin-top: 2vh;
 }
 .hero-content .logo {
@@ -17,7 +16,19 @@ header {
 .h1-seine{
     color: white;
     letter-spacing: 2px;
-  }
+}
+
+nav{  
+    position: sticky;
+    -webkit-position: sticky;
+    top: 0;
+    /* border: solid 5px red; */
+}
+
+/* Burger *****************/
+.burger, .close-menu{
+    display: none;
+}
 
 main {
     max-width: 1200px;

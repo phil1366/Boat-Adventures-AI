@@ -1,0 +1,19 @@
+@media (min-width: 768px) and (max-width: 992px){
+#galerie p{
+    font-size: calc(2rem - 10px);
+    white-space: pre-wrap;  
+}
+}
+
+/************************/
+@media (min-width: 375px) and (max-width: 767px){
+.burger {    
+    color: black !important;
+    position: absolute;
+    top: 7% !important;
+    left: 49% !important;
+}
+#galerie p{
+    font-size: calc(2rem - 16px); 
+}
+}

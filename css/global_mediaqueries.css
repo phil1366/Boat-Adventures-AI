@@ -1,4 +1,4 @@
-@media (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 375px) and (max-width: 767px) {  /* menu burger */
 .burger {
     display: block;
     transform: scale(2.5);

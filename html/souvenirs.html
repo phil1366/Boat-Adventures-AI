@@ -1,31 +1,109 @@
-<section id="content-area">
-    <div id="photo-gallery" class="hidden">
-      <h2>Galerie Photos</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="gallery1.jpg" alt="Bateau naviguant sur la Seine à Paris" width="250" height="250">
-          <div class="gallery-caption">La Seine à Paris</div>
-        </div>
-        <div class="gallery-item">
-          <img src="gallery2.jpg" alt="Paysage pittoresque le long du Rhin" width="250" height="250">
-          <div class="gallery-caption">Le Rhin pittoresque</div>
-        </div>
-        <div class="gallery-item">
-          <img src="gallery3.jpg" alt="Coucher de soleil sur le Danube" width="250" height="250">
-          <div class="gallery-caption">Coucher de soleil sur le Danube</div>
-        </div>
-        <div class="gallery-item">
-          <img src="gallery4.jpg" alt="Intérieur luxueux d'un yacht" width="250" height="250">
-          <div class="gallery-caption">Intérieur d'un yacht de luxe</div>
-        </div>
-        <div class="gallery-item">
-          <img src="gallery5.jpg" alt="Famille profitant d'un pique-nique sur le pont" width="250" height="250">
-          <div class="gallery-caption">Pique-nique en famille</div>
-        </div>
-        <div class="gallery-item">
-          <img src="gallery6.jpg" alt="Vue aérienne d'un bateau traversant un canal" width="250" height="250">
-          <div class="gallery-caption">Vue aérienne d'un canal</div>
-        </div>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="souvenirs de clients">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/souvenirs.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/souvenirs_mediaqueries.css">
+  <link rel="stylesheet" href="/css/global_mediaqueries.css">
+
+  <title>Souvenirs</title>
+</head>
+
+<body>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="../html/accueil.html">Accueil</a></li>
+      <li><a href="../html/accueil.html#fleuves">Nos Fleuves</a></li>
+      <li><a href="../html/accueil.html#bateaux">Nos Bateaux</a></li>
+      <li><a href="../html/souvenirs.html">Souvenirs</a></li>
+      <li><a href="../html/reservations.html">Réservations</a></li>
+      <li><a href="../html/contact.html">Contact</a></li>
+    </ul>
+    <div class="close-menu">
+      <i class="fa-solid fa-times"></i>
+    </div>
+  </nav>
+
+  <!-- Menu burger -->
+  <div class="burger">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <section id="galerie">
+    <h2>Galerie Photos</h2>
+    <p>Découvrez les magnifiques paysages et moments inoubliables de nos croisières fluviales.</p>
+
+    <div class="photo-gallery">
+      <div class="photo-item">
+        <img src="../src/images/gallerie—photos/seine.png" alt="Bateau naviguant sur la Seine à Paris" loading="lazy">
+        <div class="photo-caption">Le romantique Pont des Arts sur la Seine</div>
+      </div>
+
+      <div class="photo-item">
+        <img src="../src/images/gallerie—photos/rhin.png" alt="Paysage pittoresque le long du Rhin" loading="lazy">
+        <div class="photo-caption">Le Rhin pittoresque</div>
+      </div>
+
+      <div class="photo-item">
+        <img src="../src/images/gallerie—photos/danube.png" alt="Coucher de soleil sur le Danube" loading="lazy">
+        <div class="photo-caption">Coucher de soleil magique sur le Danube</div>
+      </div>
+
+      <div class="photo-item">
+        <img src="../src/images/gallerie—photos/douro.png" alt="Charme authentique du Douro" loading="lazy">
+        <div class="photo-caption">Charme authentique du Douro</div>
+      </div>
+
+      <div class="photo-item">
+        <img src="../src/images/gallerie—photos/delices-culinaires.png" alt="Délices culinaires avec vue"
+          loading="lazy">
+        <div class="photo-caption">Délices culinaires avec vue</div>
+      </div>
+
+      <div class="photo-item">
+        <img src="../src/images/gallerie—photos/nocturne.png" alt="Célébration nocturne sur l'eau" loading="lazy">
+        <div class="photo-caption">Célébration nocturne sur l'eau</div>
+      </div>
+
+      <div class="photo-item">
+        <img src="../src/images/gallerie—photos/village-authentique.png" alt="village-authentique" loading="lazy">
+        <div class="photo-caption">village authentique</div>
+      </div>
+
+      <div class="photo-item">
+        <img src="../src/images/gallerie—photos/nocturne-2.png" alt="village-authentique" loading="lazy">
+        <div class="photo-caption">Autre célébration nocturne coucher de soleil</div>
       </div>
     </div>
   </section>
+
+  <a id="scroll-to-top" href="#"><i class="fas fa-arrow-up"></i></a>
+
+  <footer>
+    <p>&copy; 2024 Boating Adventures. Tous droits réservés.</p>
+    <div class="social-links">
+      <a href="https://facebook.com/boatingadventures" target="_blank" rel="noopener noreferrer"
+        aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/boatingadventures" target="_blank" rel="noopener noreferrer"
+        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/boatingadv" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i
+          class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com/boatingadventures" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+          class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+
+</body>
+
+</html>
