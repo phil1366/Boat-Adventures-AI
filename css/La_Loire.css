@@ -5,6 +5,9 @@ body {
   }
   
   /* Burger *****************/
+  nav{
+    position: fixed;
+  }
   .burger, .close-menu{
     display: none;
   }
@@ -29,12 +32,7 @@ body {
   .h1-Loire {
     letter-spacing: 2px;
   }
-  
-  /* Burger *****************/
-  .burger, .close-menu{
-    display: none;
-  }
-  
+ 
   
   /* Main *********************/
   main {
@@ -145,7 +143,8 @@ body {
     }
     
     nav{
-        display: none;
+      position: relative;
+      top: 0;
     }
     
     
