@@ -1,4 +1,7 @@
 @media (min-width: 375px) and (max-width: 767px) {  /* menu burger */
+nav{
+    background: none !important;
+}
 .burger {
     display: block;
     transform: scale(2.5);
@@ -11,7 +14,7 @@
     flex-direction: column;
     height: 400px;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
     line-height: 2.5;
     position: absolute;
     top: 0;

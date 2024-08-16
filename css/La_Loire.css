@@ -120,4 +120,74 @@ body {
     background-color: var(--primary-color);
   }
   
-  
+  @media (min-width: 768px) and (max-width: 992px) {
+    #menu li{
+        padding: 0;
+        }
+    #menu li a{
+        white-space: nowrap;
+        font-size: calc(3vw - .3rem);     
+    }
+    }
+    
+    /*************************/
+    /*************************/
+    @media (min-width: 375px) and (max-width: 767px) {
+    .burger {    
+        top: 8.5%;
+    }
+    
+    .logo_titre img{
+        scale: 1.2;
+    }
+    .logo_titre h1{
+        font-size: 2.3rem;
+    }
+    
+    nav{
+        display: none;
+    }
+    
+    
+    /* Fleuves ************************/
+    .river-info {
+        grid-template-columns: 1fr;
+    }
+    .river-info h2, .river-info p{
+        text-align: center;
+    }
+    .river-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlights{    
+        flex-direction: column;
+    }
+    .highlights h2{
+        font-size: calc(2vw + 10px); 
+        width: 100%;
+        margin: 0 20vw;   
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .highlights ul{      
+        width: 72vw;
+        margin: 0 auto;
+        margin-bottom: 30px;   
+    }
+    .highlights img{
+        width: 100%;    
+    }
+    
+    .cta-resa-loire span{
+        /* border: solid red 5px; */
+        font-size: calc(2vw + .5rem) !important; 
+    }
+    }
+    
+    /**********************/
+    @media (min-width: 375px) and (max-width: 463px) {
+    footer p{
+        font-size: .85rem;
+    }
+    }

@@ -49,20 +49,17 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center; 
-  background-color: rgba(52, 152, 219, 0.9);
+  background-color: var(--dark-blue) !important;
   background: none;
   height: 100px;
   width: 100%;    
   bottom: 0;  
-  z-index: 50;  
-  border: 2px solid var(--light-blue);  
+  z-index: 20;  
   border: none;
   box-sizing: border-box;
 }
 #menu {
-  justify-content: center;
-  background-color: rgba(52, 152, 219, 0.8);
-  border: 2px solid var(--light-blue);
+  justify-content: center;  
   width: 100vw;
   height: 10vh;
   border-radius: 8px;
@@ -115,7 +112,7 @@ footer {
   text-align: center;
   padding:  1rem;
   padding-top: 3%;
-  font-size: 1.1rem; 
+  font-size: calc(2vw + 35%); 
   letter-spacing: 1px;
   height: 20vh;
   overflow-y: hidden;
@@ -129,6 +126,7 @@ footer p{
 .social-links {
   display: flex;
   justify-content: center;
+  margin-top: 3vh;
 }
 .social-links a {
   color: white;
