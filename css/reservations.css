@@ -144,12 +144,19 @@ select option:hover {
 
 /************************/
 @media (min-width: 375px) and (max-width: 767px){
-.burger {   
-    display: block; 
+.burger {    
+    display: block;
     color: black;
     position: absolute;
-    top: 2.8rem;
-    left: 10%;
+    left: 49%;
+    top: 5%;
+}
+nav{
+    position: inherit;    
+}
+.close-menu{
+    display: block !important;
+    margin-right: 10%;
 }
 #reservation-page{
     margin-top: 0;
