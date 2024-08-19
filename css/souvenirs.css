@@ -17,11 +17,11 @@ nav{
 /* Styles pour la galerie photos */
 #galerie h2{
   text-align: center;
-  padding: 40px 0 20px;
+  padding: 120px 0 20px;
 }
 #galerie p{  
   text-align: center;
-  font-size: calc(1.8vw + .3vw) ;
+  font-size: calc(1.2vw + 40%) ;
 }
 
 .photo-gallery {
@@ -30,7 +30,6 @@ nav{
   gap: 1rem;
   padding: 2rem;
 }
-
 .photo-item {
   position: relative;
   overflow: hidden;
@@ -50,7 +49,6 @@ nav{
 .photo-item:hover img {
   filter: brightness(0.7);
 }
-
 .photo-caption {
   position: absolute;
   bottom: 0;
@@ -67,19 +65,34 @@ nav{
   transform: translateY(0);
 }
 
+
+/************************/
+@media (min-width: 768px) and (max-width: 992px){
+  footer p{
+    font-size: calc(1.2rem);
+  }
+}
+
+/************************/
 /************************/
 @media (min-width: 375px) and (max-width: 767px){
 .burger {    
+  display: block;
   color: black !important;
   position: absolute;
   left: 49% !important;
 }
-
 nav{
   position: inherit;
   background: none !important;
 }
+#galerie h2{
+  margin-top: -80px;
+}
 #galerie p{
   font-size: calc(2rem - 16px); 
+}
+footer p{
+  font-size: calc(1.5vw + 7px);
 }
 }
