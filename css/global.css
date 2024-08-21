@@ -86,7 +86,7 @@ nav ul li a {
 /* Scroll to top ********************/
 #scroll-to-top {
   position: fixed;
-  bottom: 50px;
+  bottom: 20px;
   right: 20px;
   background-color: #333;
   width: 40px;

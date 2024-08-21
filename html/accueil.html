@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/html/souvenirs.html">
   <link rel="stylesheet" href="/html/reservations.html">
   <link rel="stylesheet" href="/html/contact.html">
+  <link rel="stylesheet" href="/html/penichette.html">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/accueil.css">
   <link rel="stylesheet" href="/css/La_Loire.css">
@@ -39,7 +40,7 @@
     <div class="hero-content-accueil">
       <div class="logo_titre">
         <img src="../src/images/gouvernail.png" alt="icone gouvernail" class="logo">
-        <h1>Boating Adventures</h1>
+        <h1 class="h1-home">Boating Adventures</h1>
       </div>
       <p class="hero-text">Découvrez la beauté des fleuves européens à bord de nos bateaux confortables. Une aventure
         inoubliable vous attend ! Naviguez à travers des paysages pittoresques, explorez des villes historiques et vivez
@@ -55,20 +56,19 @@
       </span>
     </button>
 
-    <nav>
-      <ul id="menu">
-        <li><a href="../html/accueil.html">Accueil</a></li>
-        <li><a href="../html/accueil.html#fleuves">Nos Fleuves</a></li>
-        <li><a href="../html/accueil.html#bateaux">Nos Bateaux</a></li>
-        <li><a href="../html/souvenirs.html">Souvenirs</a></li>
-        <li><a href="../html/reservations.html">Réservations</a></li>
-        <li><a href="../html/contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- Nav -->
+    <ul id="nav-ban">
+      <li><a href="../html/accueil.html">Accueil</a></li>
+      <li><a href="../html/accueil.html#fleuves">Nos Fleuves</a></li>
+      <li><a href="../html/accueil.html#bateaux">Nos Bateaux</a></li>
+      <li><a href="../html/souvenirs.html">Souvenirs</a></li>
+      <li><a href="../html/reservations.html">Réservations</a></li>
+      <li><a href="../html/contact.html">Contact</a></li>
+    </ul>
+
   </header>
 
-  <!-- Menu burger -->
-
+  <!-- Menu burger  placé différement des autres pages -->
   <ul id="menu-burger">
     <li><a href="../html/accueil.html">Accueil</a></li>
     <li><a href="../html/accueil.html#fleuves">Nos Fleuves</a></li>
@@ -80,12 +80,10 @@
   <div class="close-menu">
     <i class="fa-solid fa-times"></i>
   </div>
-
-
-  <div class="burger">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-
+    
+    <div class="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
 
 
   <main>
@@ -166,29 +164,35 @@
         <div class="boat-card">
           <img src="../src/images/Nos_bateaux/penichette.png" alt="penichette" loading="lazy">
           <h2>Pénichette</h2>
+          <a href="../html/penichette.html" class="btn-plus">En savoir plus</a>
         </div>
         <div class="boat-card">
           <img src="../src/images/Nos_bateaux/Houseboat.png" alt="bateau spacieux pour 4 à 6 personnes" loading="lazy">
           <h2>Houseboat</h2>
+          <a href="../html/houseboat.html" class="btn-plus">En savoir plus</a>
         </div>
         <div class="boat-card">
           <img src="../src/images/Nos_bateaux/Penichette-luxe.jpg" alt="Pénichette de luxe pour 6 à 8 personnes"
             loading="lazy">
           <h2>Pénichette luxe</h2>
+          <a href="#" class="btn-plus">En savoir plus</a>
         </div>
         <div class="boat-card">
           <img src="../src/images/Nos_bateaux/Catamaran_bateau-stable-pour-4.png"
             alt="Catamaran, bateau stable pour 4 à 6 personnes" width="300" height="200">
           <h2>Catamaran</h2>
+          <a href="#" class="btn-plus">En savoir plus</a>
         </div>
         <div class="boat-card">
           <img src="../src/images/Nos_bateaux/bateau-sans-permis.jpg" alt="bateau sans permis" loading="lazy">
           <h2>bateau sans permis</h2>
+          <a href="#" class="btn-plus">En savoir plus</a>
         </div>
         <div class="boat-card">
           <img src="../src/images/Nos_bateaux/narrowboat.jpg" alt="Narrowboat, bateau étroit pour 2 à 4 personnes"
             loading="lazy">
           <h2>Narrowboat</h2>
+          <a href="#" class="btn-plus">En savoir plus</a>
         </div>
       </div>
     </section>
@@ -210,7 +214,7 @@
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/style.js"></script>
 
 </body>
 

@@ -24,14 +24,13 @@
   align-items: center;
 }
 
-h1 {
+.h1-home {
   font-size: calc(4vw + 10px);
   -webkit-text-stroke: 2px var(--light-blue);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   position: relative;
   right: 2vw;
 }
-
 
 .hero-text {
   background-color: rgba(52, 152, 219, 0.8);
@@ -122,10 +121,32 @@ h1 {
   }
 }
 
-
 /* Burger *****************/
-#menu-burger, .burger, .close-menu{
+#menu-burger, .hamburger, .close-menu{  
   display: none;
+}
+
+/* Nav */
+#nav-ban{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: rgba(52, 152, 219, 0.8);
+  width: 100%;
+  height: 10vh;
+  margin: 0 auto;     
+  z-index: 20;  
+  border: 2px solid var(--light-blue);
+  border-radius: 5px;
+}
+#nav-ban li{
+  list-style-type: none;
+  padding-right: 2%;
+}
+#nav-ban a{
+  font-size: calc(0.7vw + 14px);
+  color: white;
+  text-decoration: none;   
 }
 
 /* Main ******************/
@@ -184,11 +205,14 @@ main {
 .river-card p {
   margin-bottom: 1rem;
 }
+.boat-card .btn-plus{
+  margin-bottom: 2.7%;
+}
 .btn-plus {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 12vw;
+  width: 15vw;
   background: var(--medium-blue);  
   color: #fff;
   padding: 0.5rem 1rem;
@@ -198,4 +222,100 @@ main {
 }
 .btn-plus:hover {
   color: white;
+}
+
+/*********************/
+@media (min-width: 768px) and (max-width: 992px){
+#nav-ban{
+  padding-right: 2.5vw;
+  white-space: nowrap;   
+}
+}
+
+/**********************/
+@media (min-width: 375px) and (max-width: 767px){
+.hero-gallery {
+  height: 110%;
+}
+.logo_titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-3%);
+}
+.logo_titre .logo {   /* gouvernail */
+  width: 5rem;
+}
+.logo_titre .logo, .h1-home{ 
+  right: 1rem;
+}
+.hero-text{
+  text-align: center;
+}
+.icon-wrapper{
+  align-items: center;
+  margin-top: .5%;
+  height: 2rem !important;
+  width: 2rem !important;
+}
+.icon-wrapper svg {
+  scale: 1.5; 
+  padding-bottom: 25%;
+}
+#nav-ban{
+  display: none;
+}
+.cta-button{
+  margin: 0 auto;
+}
+
+/* hamburger ******************/
+.hamburger{
+  display: block;  
+}
+.hamburger i{
+  display: flex;
+  justify-content: center;
+  transform: scale(2.5);
+  color: white;
+  margin-top: -4vh;
+  margin-bottom: 5rem;  
+}
+#menu-burger {
+  display: block;
+  line-height: 2.5;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  background-color: rgba(52, 152, 219, .8);
+  border-radius: 30px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  position: absolute;
+  min-height: 56vh;
+  width: 100vw;
+  top: 0;
+}
+#menu-burger li{
+  transform: translateX(-3%);
+  list-style-type: none; 
+  margin-top: 5vh; 
+}
+#menu-burger li a{  
+  display: flex;
+  justify-content: center;
+  text-decoration: none; 
+  color: #fff; 
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Main ******************/
+.river-card, .boat-card{  
+  width: 100%; 
+}
+.btn-plus{
+  width: 30vw;
+}
 }

@@ -69,18 +69,19 @@ main {
     justify-content: center;
 }
 .cta-resa-seine .btn{ 
-  background-color: #fff;
-  margin-top: 2rem;  
-  border: 3px solid var(--medium-blue);
-  border-radius: 15px;
+    background-color: #fff;
+    margin-top: 2rem;  
+    border: 3px solid var(--medium-blue);
+    border-radius: 15px;
 }
 .cta-resa-seine .btn span{
-  color: var(--medium-blue);  
-  letter-spacing: 1px;
-  font-size: calc(1vw + 8px); 
+    color: var(--medium-blue);  
+    letter-spacing: 1px;
+    font-size: calc(1vw + 8px); 
 }
 .cta-resa-seine .btn:hover {
-  background-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
 }
 .h1-Loire {      
     letter-spacing: 2px;
