@@ -83,6 +83,67 @@ nav ul li a {
   transition: color 0.3s ease;
 } 
 
+.divider{
+  height: 10px;
+  background-color:var(--secondary-color);
+  width: 80%;
+  margin: 0 auto 2rem;
+  border-radius: 12px;
+}
+
+/* Newsletter *********************/
+.newsletter-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.newsletter-form h2 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 24px;
+  padding-right: 40px;
+}
+select::-ms-expand {
+  display: none;
+}
+.form-group {
+  margin-bottom: 0.5rem !important;
+  height: 11vh;
+}
+.form-group input{
+  height: 6vh;
+}
+label {
+  display: block;
+  margin-bottom: 0.2rem !important;
+  font-weight: bold;
+} 
+button[type="submit"]{   /* meme btn dans page resa */
+  padding: 8px !important;
+  letter-spacing: 2px !important;
+}
+
 /* Scroll to top ********************/
 #scroll-to-top {
   position: fixed;
@@ -138,4 +199,17 @@ footer p{
 }
 .social-links a:hover {
   scale: 2;
+}
+
+/*************************/
+@media (min-width: 375px) and (max-width: 767px) {
+.newsletter-form {
+  width: 90vw;
+  margin: 0 auto;
+}
+.newsletter-form h2 {
+  font-size: calc(2vw + .7rem); 
+  width: 100%;
+  text-align: center;
+}
 }
