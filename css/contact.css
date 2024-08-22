@@ -129,3 +129,12 @@ footer{
   margin-top: 0;
   height: 15% !important;
 }
+
+/**********************/
+@media (min-width: 375px) and (max-width: 767px) {  /* menu burger */
+.burger {
+  position: absolute;
+  top: 7% !important;
+  left: 50% !important;
+}
+}

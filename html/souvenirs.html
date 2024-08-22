@@ -45,12 +45,10 @@
         <img src="../src/images/gallerie—photos/seine.png" alt="Bateau naviguant sur la Seine à Paris" loading="lazy">
         <div class="photo-caption">Le romantique Pont des Arts sur la Seine</div>
       </div>
-
       <div class="photo-item">
         <img src="../src/images/gallerie—photos/rhin.png" alt="Paysage pittoresque le long du Rhin" loading="lazy">
         <div class="photo-caption">Le Rhin pittoresque</div>
       </div>
-
       <div class="photo-item">
         <img src="../src/images/gallerie—photos/danube.png" alt="Coucher de soleil sur le Danube" loading="lazy">
         <div class="photo-caption">Coucher de soleil magique sur le Danube</div>
@@ -60,23 +58,19 @@
         <img src="../src/images/gallerie—photos/douro.png" alt="Charme authentique du Douro" loading="lazy">
         <div class="photo-caption">Charme authentique du Douro</div>
       </div>
-
       <div class="photo-item">
         <img src="../src/images/gallerie—photos/delices-culinaires.png" alt="Délices culinaires avec vue"
           loading="lazy">
         <div class="photo-caption">Délices culinaires avec vue</div>
       </div>
-
       <div class="photo-item">
         <img src="../src/images/gallerie—photos/nocturne.png" alt="Célébration nocturne sur l'eau" loading="lazy">
         <div class="photo-caption">Célébration nocturne sur l'eau</div>
       </div>
-
       <div class="photo-item">
         <img src="../src/images/gallerie—photos/village-authentique.png" alt="village-authentique" loading="lazy">
         <div class="photo-caption">village authentique</div>
       </div>
-
       <div class="photo-item">
         <img src="../src/images/gallerie—photos/nocturne-2.png" alt="village-authentique" loading="lazy">
         <div class="photo-caption">Autre célébration nocturne coucher de soleil</div>
@@ -84,16 +78,23 @@
     </div>
   </section>
 
+  <div class="fullscreen-image">
+    <span class="close-button">&times;</span>
+    <img src="" alt="">
+  </div>
+
   <div class="newsletter">
     <form class="newsletter-form" action="https://example.com/subscribe" method="post">
       <h2>Abonnez-vous à notre newsletter</h2>
-      <div class="form-group">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Adresse e-mail :</label>
-        <input type="email" id="email" name="email" required>
+      <div class="form-row">
+        <div class="form-column">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-column">
+          <label for="email">Adresse e-mail :</label>
+          <input type="email" id="email" name="email" required>
+        </div>
       </div>
       <div class="form-group">
         <label for="preferences">Préférences :</label>
@@ -124,6 +125,45 @@
   </footer>
 
   <script src="/style.js"></script>
+
+  <!-- Grossissement images -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gallery = document.querySelector('.photo-gallery');
+      const fullscreenImage = document.querySelector('.fullscreen-image');
+      const fullscreenImg = fullscreenImage.querySelector('img');
+      const closeButton = document.querySelector('.close-button');
+
+      gallery.addEventListener('click', function (e) {
+        if (e.target.tagName === 'IMG') {
+          fullscreenImg.src = e.target.src;
+          fullscreenImg.alt = e.target.alt;
+          fullscreenImage.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+
+      function closeFullscreen() {
+        fullscreenImage.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      closeButton.addEventListener('click', closeFullscreen);
+
+      fullscreenImage.addEventListener('click', function (e) {
+        if (e.target === fullscreenImage) {
+          closeFullscreen();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeFullscreen();
+        }
+      });
+    });
+  </script>
+
 </body>
 
 </html>
