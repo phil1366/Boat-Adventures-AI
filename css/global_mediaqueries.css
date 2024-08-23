@@ -1,4 +1,5 @@
-@media (min-width: 375px) and (max-width: 767px) {  /* menu burger */
+/* Menu burger ***************/
+@media (min-width: 375px) and (max-width: 767px) {  
 nav{
     background: none !important;
 }

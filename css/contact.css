@@ -1,21 +1,11 @@
-body {
-  scroll-behavior: smooth; 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body{
+    scroll-behavior: smooth;
+    background-color: #ecf0f1;
 }
 
 /* Burger *****************/
 .burger, .close-menu{
-  display: none;
-}
-
-main{
-  background-image: url("../src/images/Bateau_sur_fleuve_nocturne.png"); 
-  background-repeat: no-repeat;   
-  object-fit: cover;
-  color: #fff;
-  font-weight: bolder; 
+    display: none;
 }
 
 nav{
@@ -23,57 +13,50 @@ nav{
   top: 0; 
 }
 
-.contact-title, #contact-container {
-  margin: 30px 10%;
-}
-.contact-title h1{
-  font-size: 2.2rem;
-  font-weight: bolder;
-  margin: 100px 0 10px;
-}
-.contact-form h2{
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-/* Contact-info **********/
-.contact-info p {
-  margin-bottom: 1rem;
-}
-#contact-info h2{
-  font-weight: 600;
-  font-size: 1.7rem;
-  margin-bottom: 20px;
-  white-space: nowrap;
-}
-#contact-info h3{
-  display: inline-block; /* le h3 s'adapte à son contenu */
-  font-weight: 600;
-  font-size: 1.3rem;
-  border-bottom: solid #fff 3px; 
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+section{  
+  background-image: url("../src/images/Bateau_sur_fleuve_nocturne.png"); 
+  background-repeat: no-repeat;     
+  object-fit: cover;
+  color: #fff;
+  font-weight: bolder;    
+  height: 60rem;
+  margin: 10rem 9vw;
 }
 
 /* Nouveaux styles pour la page de contact */
 #contact-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
+  display: flex;  
+  width: 65vw;
+  margin: 2rem auto;
 }
-
+.h1-contact{
+  text-align: center;
+  padding: 1.8rem;
+}
+.contact-title p{
+  text-align: center;
+  font-size: 1.2rem;
+  width: 65%;
+  margin: 0 auto;
+}
 .contact-form {
-  flex: 1;
-  margin-right: 2rem;
+  flex: 2;
+  margin-right: 3rem;
 }
 #contact-info {
   flex: 1;
 }
-
+#contact-info h2{
+  margin-bottom: 10%;
+}
+.contact-form h2, .contact-form h3, #contact-info h2, #contact-info h3{
+  white-space: nowrap;
+}
+#contact-info p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+  
 form {
   display: flex;
   flex-direction: column;
@@ -81,11 +64,17 @@ form {
 label {
   margin-top: 1rem;
   font-weight: bold;
-}input, textarea {
+}
+input, textarea {
   margin-top: 0.5rem;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.socio-media{
+  scale: 1.2;
+  margin-left: 8%;  
 }
 
 button {
@@ -104,37 +93,36 @@ button:hover {
   border: solid 3px var(--secondary-color);
 }
 
-#contact-info p {
-  margin-bottom: 1rem;
+input[type="submit"]{
+  background-color: var(--secondary-color);
+  color: white;
+  border: none; 
+  font-size: 1.2rem;
+  border-radius: 5px;  
+  width: 100%;
+  margin: 5% 0 -40vh;
 }
 
-.social-links {
-  display: none !important; 
+.newsletter {
+  margin: -4rem auto 0 !important;  
 }
-
-.social-media a {
-  color: #fff;
-  font-size: 2rem;
-  text-decoration: none;
-  padding-right: 5%;
-}
-.social-media a:hover {
-  color: var(--secondary-color);
-}
-
-footer{
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0;
-  height: 15% !important;
-}
-
-/**********************/
-@media (min-width: 375px) and (max-width: 767px) {  /* menu burger */
-.burger {
-  position: absolute;
-  top: 7% !important;
-  left: 50% !important;
-}
-}
+ 
+/***************************/
+@media (min-width: 375px) and (max-width: 767px){
+  .burger {
+    position: absolute;
+    top: 7% !important;
+    left: 50% !important;
+  }
+  main{
+    padding: 0;
+  
+  }
+  .h1-contact{
+    text-align: center;
+    padding-bottom: 2%;
+  }
+  .contact-title p, .contact-form h2{
+    text-align: center;
+  }
+  }
