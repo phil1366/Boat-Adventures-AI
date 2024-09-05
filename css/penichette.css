@@ -212,6 +212,24 @@ main {
     color: black !important; 
     left: 49% !important;
 }
+.boat-description{
+    margin: 2rem;    
+}
+.features-list {      
+    border: 5px solid var(--light-blue);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 2rem;
+}
+.features-list h3{
+    text-decoration: underline;
+}
+.features-list li{
+    transform: translateX(-1rem);
+}
+.features-list li::before {
+    content: "";
+}
 .boat-details h2{
     font-size: 2rem;
 }
@@ -228,6 +246,7 @@ main {
 .img-penichette img{
     min-width: 90%;  
     margin-left: 5%;  
+    object-fit: cover;
 }
 .img-penichette img:hover {
     transform: none;

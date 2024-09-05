@@ -1,4 +1,4 @@
-// menu burger toutes pages ************************************/
+//MENU BURGER ************************************/
   document.querySelector('.burger').addEventListener('click', () => {
   document.querySelector('nav').classList.add('menu-open');
 });
@@ -7,8 +7,133 @@
 });
 //************************************/
 
+// LOUPE *****************************/
+document.addEventListener('DOMContentLoaded', function() {
+    // Attendre que le DOM soit complètement chargé avant d'exécuter le code
+    const searchIcon = document.querySelector('.search-icon');
+    // Sélectionne l'icône de recherche pour pouvoir l'utiliser plus tard
+    const searchContainer = document.querySelector('.search-container');
+    // Sélectionne le conteneur de la recherche pour l'afficher ou le masquer
+    const searchInput = document.querySelector('.search-input');
+    // Sélectionne le champ de saisie de la recherche pour interagir avec lui
+    const closeSearch = document.querySelector('.close-search');
+    // Sélectionne l'icône pour fermer le champ de recherche
+    const searchResults = document.querySelector('.search-results');
+    // Sélectionne la liste des résultats de recherche pour l'afficher dynamiquement
+    const mobileMenu = document.getElementById('mobile-menu');
+    // Sélectionne le menu mobile pour le masquer lors de l'ouverture de la recherche
+
+    // Tableau de mots-clés et leurs ancres associées sur la page  
+    const keywords = [
+        { keyword: "Seine", anchor: "#fleuves-seine" },        
+        { keyword: "seine", anchor: "#fleuves-seine" },        
+        { keyword: "Loire", anchor: "#fleuve-loire" },           
+        { keyword: "loire", anchor: "#fleuve-loire" },           
+        { keyword: "Châteaux", anchor: "#fleuve-loire" },
+        { keyword: "chateaux", anchor: "#fleuve-loire" },
+        { keyword: "chateau", anchor: "#fleuve-loire" },
+        { keyword: "Pénichette", anchor: "#bateaux-penichette" },
+        { keyword: "penichette", anchor: "#bateaux-penichette" },
+        { keyword: "peniche", anchor: "#bateaux-penichette" },
+        { keyword: "Houseboat", anchor: "#bateaux-houseboat" },
+        { keyword: "houseboat", anchor: "#bateaux-houseboat" },
+        { keyword: "Paris", anchor: "#destinations-paris" },        
+        { keyword: "paris", anchor: "#destinations-paris" },        
+        { keyword: "Louvre", anchor: "#destinations-paris" },        
+        { keyword: "louvre", anchor: "#destinations-paris" },        
+    ];
+
+    function openSearch() {   // Fonction pour ouvrir le champ de recherche     
+        // Ajoute la classe 'active' pour afficher le conteneur de recherche   
+        searchContainer.classList.add('active');
+        // Masque le menu mobile
+        mobileMenu.style.display = 'none';
+        // Place le curseur dans le champ de saisie pour que l'utilisateur puisse taper immédiatement
+        searchInput.focus();        
+    }
+
+    // Fonction pour fermer le champ de recherche
+    function closeSearchField() {
+    // Retire la classe 'active' pour masquer le conteneur de recherche    
+        searchContainer.classList.remove('active');
+    // Réaffiche le menu mobile
+        mobileMenu.style.display = '';
+    // Efface les résultats de recherche précédents 
+        searchResults.innerHTML = '';
+    // Réinitialise le champ de saisie
+        searchInput.value = '';    
+    }
+
+    // Ajoute un événement de clic sur l'icône de recherche pour ouvrir la recherche
+    searchIcon.addEventListener('click', openSearch);
+    // Ajoute un événement de clic sur l'icône de fermeture pour fermer la recherche
+    closeSearch.addEventListener('click', closeSearchField);
+    // Ajoute un événement à la saisie dans le champ de recherche
+    searchInput.addEventListener('input', function() {
+        // Convertit la saisie de l'utilisateur en minuscule pour une comparaison non sensible à la casse
+        const value = this.value.toLowerCase();        
+        const filteredKeywords = keywords.filter(item => 
+            item.keyword.toLowerCase().includes(value)
+        );
+        // Filtre les mots-clés en fonction de la saisie de l'utilisateur
+        searchResults.innerHTML = '';
+        // Efface les anciens résultats de recherche
+        filteredKeywords.forEach(item => {
+            const li = document.createElement('li');
+            // Crée un nouvel élément de liste pour chaque mot-clé correspondant
+            li.textContent = item.keyword;
+            // Définit le texte de l'élément de liste avec le mot-clé
+            li.addEventListener('click', function() {
+                // Redirige l'utilisateur vers l'ancre associée au mot-clé cliqué
+                window.location.href = item.anchor;                
+                // Ferme le champ de recherche après la sélection
+                closeSearchField();
+               
+            });
+            // Ajoute l'élément de liste à la liste des résultats de recherche
+            searchResults.appendChild(li);
+            
+        });
+    });
+
+    // Ferme la recherche si l'utilisateur clique en dehors du conteneur de recherche
+    document.addEventListener('click', function(event) {
+        if (!searchContainer.contains(event.target) && !searchIcon.contains(event.target)) {
+            closeSearchField();
+        }
+    });
+
+    // Ajoute une gestion du clavier pour permettre de fermer la recherche avec la touche Échap
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && searchContainer.classList.contains('active')) {
+            closeSearchField();
+        }
+    });
+
+    // Ajoute une gestion de la touche Entrée pour sélectionner le premier résultat de la recherche
+    searchInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            // Sélectionne le premier élément de la liste des résultats
+            const firstResult = searchResults.querySelector('li');
+            
+            if (firstResult) {
+                // Récupère le texte du premier résultat
+                const keyword = firstResult.textContent.toLowerCase();                
+                // Trouve l'élément correspondant dans le tableau des mots-clés
+                const item = keywords.find(k => k.keyword.toLowerCase() === keyword);                
+                if (item) {
+                    // Redirige l'utilisateur vers l'ancre associée
+                    window.location.href = item.anchor;                    
+                    // Ferme la recherche après la sélection
+                    closeSearchField();                    
+                }
+            }
+        }
+    });
+});
 //************************************/
-// Ajout de la gestion de la galerie photos - Souvenirs -
+
+// GALERIE PHOTOS *******************/
 const galleryLink = document.querySelector('a[data-target="gallery"]');
 const photoGallery = document.getElementById('photo-gallery');
 
@@ -21,8 +146,7 @@ galleryLink.addEventListener('click', (e) => {
 });
 //************************************/
 
-//************************************/
-// seine
+// SEINE ***********************
 document.addEventListener('DOMContentLoaded', function() { //Attends que le DOM soit entièrement chargé avant d'exécuter le code
 const navLinks = document.querySelectorAll('nav a');
     
@@ -73,8 +197,8 @@ Interaction avec le bouton CTA : Le clic sur le bouton CTA empêche l'action par
 le système de réservation est en développement. */
 
 //************************************/
-// Réservations
 
+// RESERVATIONS ***********************/
 //Exécute le code une fois que le DOM est entièrement chargé
 document.addEventListener('DOMContentLoaded', (event) => {
 
@@ -123,7 +247,6 @@ today.setHours(0, 0, 0, 0); // Réinitialise les heures pour comparer uniquement
 //Ajoute des écouteurs d'événement pour valider les dates lorsqu'elles changent
     startDate.addEventListener('change', validateDates);
     endDate.addEventListener('change', validateDates);
-
 //Ajoute un écouteur d'événement pour valider le nombre de passagers lors de la saisie
     passengers.addEventListener('input', function() {
 //Convertit la valeur du champ en nombre entier
@@ -148,10 +271,9 @@ const value = parseInt(this.value);
 le formulaire est soumis.
 Validation des dates : Vérifie que la date de début est dans le futur et que la date de fin est postérieure à la date de début.
 Validation du nombre de passagers : Vérifie que le nombre de passagers est compris entre 1 et 10. */
-
 /************************************/
 
-//Animations supplémentaires ************************************/
+//ANIMATIONS SUP ********************/
 
 //Sélectionne tous les éléments avec la classe "form-group"
 const formGroups = document.querySelectorAll('.form-group');
@@ -182,8 +304,7 @@ le groupe de formulaire revient à sa position d'origine avec une animation flui
 
 //************************************/
 
-//************************************/
-// Scroll to top button
+// SCROLL TO TOP *********************/
 window.onscroll = function () { //Assigne une fonction à l'événement
   scrollFunction(); //Appelle la fonction scrollFunction à chaque fois que l'user fait défiler la page
 };

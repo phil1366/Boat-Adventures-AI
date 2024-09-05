@@ -211,3 +211,34 @@ main {
   button[type="submit"]:hover {
     background-color: #c0392b;
   }
+
+  /****************************/
+  @media (min-width: 375px) and (max-width: 767px){
+  .hero-image {
+    margin-top: -5rem;
+    object-fit: cover;
+  }
+  #about, #attractions h2, #attractions ul li, #itineraires, #reservation{
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  #attractions ul{
+    border: 5px solid var(--light-blue);
+    border-radius: 15px;
+    list-style-type: none;
+    padding: 2% 0;
+    min-width: 60%;    
+    margin: 0 auto;
+  }
+  #itineraires h2{
+    margin-bottom: 1rem;
+    text-decoration: underline;
+  }
+  #reservation h2{
+    margin-top: -5vh;
+  }
+  footer p{
+    font-size: calc(1.5vw + .5rem); 
+    white-space: pre-wrap;
+  }
+}

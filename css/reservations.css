@@ -239,7 +239,7 @@ nav{
     width: 70%;
 }
 button[type="submit"] span{
-    font-size: calc(1.5vw + 15px)
+    font-size: calc(1.5vw + 10px)
 }
 footer p{
     font-size: calc(1.8vw + 7px) !important;
