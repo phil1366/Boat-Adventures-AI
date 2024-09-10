@@ -240,6 +240,19 @@ main {
  /****************************/
  /****************************/
   @media (min-width: 375px) and (max-width: 767px){
+  .search-container {    
+    top: -12.5vh;  
+    height: 45%;
+  }    
+  .search-icon{       
+    right: 10%;
+    top: -10vh;     
+  }
+  .close-search {    
+    right: 60px;
+    top: 21vh;   
+  }
+
   .hero-image {
     margin-top: -5rem;
     object-fit: cover;

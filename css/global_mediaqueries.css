@@ -36,9 +36,6 @@ nav{
     font-size: 1.3rem;
     white-space: nowrap;
 }
-.search-icon{
-    display: none;
-}
 
 /* Styling de la croix avec animation */
 .close-menu {
