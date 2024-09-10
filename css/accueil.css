@@ -156,6 +156,55 @@ h1 {
     text-decoration: none;   
 }
 
+/* Loupe ***********************/
+/* Styles pour loupe et champ de recherche */
+.research-contain {
+  display: none;
+  position: relative;
+  top: -14vh;
+  width: 94vw;
+  margin: 0 auto !important; 
+  z-index: 50;
+  height: 0;
+}
+.research-icone{
+  display: block;
+  position: absolute;
+  right: 7.5%;
+  margin-top: -8rem;
+  z-index: 20; 
+  scale: 1.8;
+  cursor: pointer;
+}
+.research-contain.active {
+  display: flex;
+  align-items: center;
+}
+.research-inp {
+  background-color: var(--secondary-color); 
+  height: 13vh !important;
+  padding: 0 20px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.research-inp::placeholder {
+  color: #fff !important;
+  opacity: 1;
+  font-size: 1.3rem;
+}
+.fermeture {
+  position: absolute;
+  right: 80px;
+  top: -1vh;
+  cursor: pointer;
+  scale: 1.7;
+  color: #fff;
+  background: none;
+  border: none;  
+  z-index: 100;
+}
+
 /* Main ******************/
 main {
     max-width: 1200px;

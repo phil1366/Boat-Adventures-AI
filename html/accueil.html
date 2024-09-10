@@ -86,6 +86,20 @@
         <i class="fa-solid fa-bars"></i>
     </div>
 
+    <!-- loupe -->
+    <div class="research-icone" aria-label="Rechercher">🔍</div>
+    <div class="research-contain">
+        <input type="text" class="research-inp" placeholder="Rechercher...">
+        <button class="fermeture" aria-label="Fermer la recherche">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+
+
     <main>
         <section id="fleuves">
             <h2>Nos Fleuves</h2>
@@ -248,6 +262,47 @@
     </footer>
 
     <script src="/scriptaccueil.js"></script>
+
+    <script> /// LOUPE *****************************/
+    // Ouvrir/fermer la barre de recherche
+    document.querySelector('.research-icone').addEventListener('click', () =>{
+    document.querySelector('.research-contain').classList.toggle('active');
+    });
+   
+    document.querySelector('.fermeture').addEventListener('click', function() {
+    document.querySelector('.research-contain').classList.remove('active');
+    });
+   
+   const keywordPages = {
+       'loire': 'http://127.0.0.1:5501/html/Loire.html', 'Loire': 'http://127.0.0.1:5501/html/Loire.html',
+       'seine': 'http://127.0.0.1:5501/html/Seine.html', 'Seine': 'http://127.0.0.1:5501/html/Seine.html',
+       'paris': 'http://127.0.0.1:5501/html/Seine.html', 'Paris': 'http://127.0.0.1:5501/html/Seine.html',
+       'louvre': 'http://127.0.0.1:5501/html/Seine.html', 'Louvre': 'http://127.0.0.1:5501/html/Seine.html',
+       'fleuve': 'http://127.0.0.1:5501/html/accueil.html#fleuves','fleuves': 'http://127.0.0.1:5501/html/accueil.html#fleuves',
+       'Fleuve': 'http://127.0.0.1:5501/html/accueil.html#fleuves','Fleuves': 'http://127.0.0.1:5501/html/accueil.html#fleuves',
+       'bateaux': 'http://127.0.0.1:5501/html/accueil.html#bateaux','bateau': 'http://127.0.0.1:5501/html/accueil.html#bateaux',
+       'Bateaux': 'http://127.0.0.1:5501/html/accueil.html#bateaux','Bateau': 'http://127.0.0.1:5501/html/accueil.html#bateaux',
+       'penichette': 'http://127.0.0.1:5501/html/penichette.html', 'Penichette': 'http://127.0.0.1:5501/html/penichette.html',
+       'pénichette': 'http://127.0.0.1:5501/html/penichette.html', 'peniche': 'http://127.0.0.1:5501/html/penichette.html',
+       'Peniche': 'http://127.0.0.1:5501/html/penichette.html', 
+       'Houseboat': 'http://127.0.0.1:5501/html/houseboat.html', 'houseboat': 'http://127.0.0.1:5501/html/houseboat.html',
+       'chateau': 'http://127.0.0.1:5501/html/Loire.html', 'chateaux': 'http://127.0.0.1:5501/html/Loire.html',
+       'croisiere': 'http://127.0.0.1:5501/html/accueil.html#fleuves', 'canal': 'http://127.0.0.1:5501/html/accueil.html#fleuves',    
+   };
+   
+    document.querySelector('.research-inp').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            const keyword = event.target.value.trim().toLowerCase();
+   
+            // Vérifier si le mot-clé a une page correspondante
+            if (keyword in keywordPages) {
+                window.location.href = keywordPages[keyword];
+            } else {
+                alert('Mot-clé non reconnu. Essayez l\'un des mots-clés valides.');
+            }
+        }
+    });
+    </script>
 
 </body>
 

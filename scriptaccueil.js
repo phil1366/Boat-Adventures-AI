@@ -1,3 +1,5 @@
+ // JS page accueil
+
  // MENU BURGER ******************/        
    const hamburger = document.querySelector('.hamburger');
    const menuBurger = document.getElementById('menu-burger');
@@ -22,3 +24,7 @@
        // Affiche `photoGallery` en supprimant la classe `hidden`
        photoGallery.classList.remove('hidden');
    });
+
+
+
+
