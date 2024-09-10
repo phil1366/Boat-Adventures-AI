@@ -243,11 +243,19 @@ button[type="submit"]:hover {
 /*************************/
 @media (min-width: 768px) and (max-width: 992px) {
 #menu li{
-    padding: 0;
+  padding: 0;
     }
 #menu li a{
-    white-space: nowrap;
-    font-size: calc(3vw - .3rem);     
+  white-space: nowrap;
+  font-size: calc(3vw - .3rem);     
+}
+.search-container {       
+  top: 5.8rem;  
+  height: 29%;
+}
+.search-icon{    
+  right: 10%;
+  top: -10vh;
 }
 }
 

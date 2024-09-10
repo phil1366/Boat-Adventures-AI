@@ -224,7 +224,21 @@ main {
     background-color: #c0392b;
   }
 
-  /****************************/
+ /****************************/
+ /****************************/
+ @media (min-width: 768px) and (max-width: 9927px){
+  .search-container {       
+    top: 5.8rem;  
+    height: 29%;
+  }
+  .search-icon{    
+    right: 10%;
+    top: -10vh;
+  }
+ }
+
+ /****************************/
+ /****************************/
   @media (min-width: 375px) and (max-width: 767px){
   .hero-image {
     margin-top: -5rem;
