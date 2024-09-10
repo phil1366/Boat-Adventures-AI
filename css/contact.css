@@ -1,71 +1,176 @@
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
+body{
+    scroll-behavior: smooth;
+    background-color: #ecf0f1;
 }
 
+/* Burger *****************/
+.burger, .close-menu{
+    display: none;
+}
+
+nav{
+  position: fixed;
+  top: 0; 
+}
+
+.close-search {  /* Loupe */
+  top: 38% !important;  
+}
+
+section{  
+  background-image: url("../src/images/Bateau_sur_fleuve_nocturne.png"); 
+  background-repeat: no-repeat;     
+  object-fit: cover;
+  color: #fff;
+  font-weight: bolder;    
+  height: 60rem;
+  margin: 10rem 9vw;
+}
+
+/* Nouveaux styles pour la page de contact */
+#contact-container {
+  display: flex;  
+  width: 65vw;
+  margin: 2rem auto;
+}
+.h1-contact{
+  text-align: center;
+  padding: 1.8rem;
+}
+.contact-title p{
+  text-align: center;
+  font-size: 1.2rem;
+  width: 65%;
+  margin: 0 auto;
+}
 .contact-form {
-    flex: 1;
-    margin-right: 2rem;
+  flex: 2;
+  margin-right: 3rem;
 }
-
-.contact-info {
-    flex: 1;
+.contact-form  h2{
+  text-decoration: underline;
 }
-
+#contact-info {
+  flex: 1;
+}
+#contact-info h2{
+  margin-bottom: 10%;
+  text-decoration: underline;
+}
+.contact-form h2, .contact-form h3, #contact-info h2, #contact-info h3{
+  white-space: nowrap;
+}
+#contact-info p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+#contact-info a{
+  font-size: calc(1.5rem - 8px);  
+}
+  
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-
 label {
-    margin-top: 1rem;
-    font-weight: bold;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+input, textarea {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-input, textarea {
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.socio-media{
+  scale: 1.2;
+  margin-left: 8%;  
 }
 
 button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  padding: .7rem 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: calc(.5vw + .9rem) ;
+  transition: background-color 0.3s ease;
 }
-
 button:hover {
-    background-color: var(--primary-color);
+  background: transparent;
+  border: solid 3px var(--secondary-color);
 }
 
-.contact-info h3 {
-    color: var(--primary-color);
-    margin-top: 0;
+input[type="submit"]{
+  background-color: var(--secondary-color);
+  color: white;
+  border: none; 
+  font-size: 1.1rem;
+  border-radius: 30px;
+  width: 100%;
+  margin: 5% 0 -40vh;
 }
 
-.contact-info p {
+/***************************/
+@media (min-width: 375px) and (max-width: 767px){
+  .burger {    
+    color: #000 !important;   
+    left: 49% !important;
+  }
+ nav{
+   position: inherit;
+  }
+  
+  #contact-container{
+    height: 130vh;
+  }
+  .contact-title{
+    margin-top: -7rem;
+  }
+  .contact-title p {
+    width: 81%;
+    font-size: calc(1.7rem - 10px) ;
+  }
+  .h1-contact{
+    text-align: center;
+    padding-bottom: 2%;
+  }
+  .contact-title p, .contact-form h2{
+    text-align: center;
+  }
+  .contact-form{
+    margin: 0;
+  }
+  .contact-form h2{
+    padding-top: 2.5rem;   
+  }
+  #contact-container{
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #contact-info{
+    text-align: center;
+    margin-top: 65vh;   
+    color: #333;
+  }
+  #contact-info h2{
     margin-bottom: 1rem;
-}
-
-.social-media {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.social-media a {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-.social-media a:hover {
-    color: var(--primary-color);
+  }
+  #contact-info span{
+    font-size: 1.05rem;
+    padding-bottom: 1rem;
+  }
+  .socio-media{
+    margin-left: 0;
+  }
+  .newsletter{
+    margin-top: 55rem !important;
+  }
+  footer p{
+    font-size: calc(1.5vw + .5rem) !important;     
+  }
 }

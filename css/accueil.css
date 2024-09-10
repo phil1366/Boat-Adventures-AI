@@ -12,6 +12,7 @@
 .hero-content-accueil {
   margin-top: -50px;
   z-index: 2;
+  width: 100%;
 }
 .hero-content-accueil .logo {  /* gouvernail */
   width: calc(8vw + 25px);
@@ -24,170 +25,336 @@
   align-items: center;
 }
 
-h1 {
+.h1-home {
   font-size: calc(4vw + 10px);
   -webkit-text-stroke: 2px var(--light-blue);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   position: relative;
   right: 2vw;
 }
+
 .hero-text {
   background-color: rgba(52, 152, 219, 0.8);
   color: white;
   padding: 1.5rem;
   border-radius: 5px;
-  font-size: calc(0.7vw + 15px);
-  width: 100%;
-  max-width: none;
+  font-size: calc(0.7vw + 15px); 
   text-align: left;
-  margin-bottom: 1.5rem;
-  z-index: 1;
+  margin-bottom: 1.5rem; 
   line-height: 1.6;
-  border: 2px solid var(--light-blue);
+  border: 2px solid var(--light-blue);  
+}
+
+
+#scroll-to-top i {
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin: 20px;
 }
 
 /* CTA ***********************/
 .cta-button {
-  display: flex;
-  align-items: center;
-  color: var(--secondary-color);
-  padding: 0.2rem 1rem;
-  border: 3px solid var(--medium-blue);
-  border-radius: 15px;
-  font-size: calc(0.5vw + 15px);
-  font-weight: 600;
-  cursor: pointer;
-  z-index: 2;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  max-height: 8vh;
-}
-.cta-button:hover {
-  transform: scale(1.05);
-}
-.cta-button .icon-wrapper {
-  display: flex;
-  border-radius: 50%;
-  background-color: var(--medium-blue);
-  margin-left: 14px;
-  position: relative;
-  top: -20%;
-  padding: 10px;
-  height: 5vh;
-}
-.cta-button svg {
-  width: 30px;
-  height: calc(0.7vw + 10px);
-  fill: white;
-  padding-top: 0.2vh;
-}
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    padding: 0.2rem 1rem;
+    border: 3px solid var(--medium-blue);
+    border-radius: 15px;
+    font-size: calc(0.5vw + 15px);
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 2;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    max-height: 8vh;
+  }
+  .cta-button:hover {
+    transform: scale(1.05);
+  }
+  .cta-button .icon-wrapper {
+    display: flex;
+    border-radius: 50%;
+    background-color: var(--medium-blue);
+    margin-left: 14px;
+    position: relative;
+    top: -20%;
+    padding: 10px;
+    height: 5vh;
+  }
+  .cta-button svg {
+    width: 30px;
+    height: calc(0.7vw + 10px);
+    fill: white;
+    padding-top: 0.2vh;
+  }
 
 /* gallery ***********************/
 .hero-gallery {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500%;
-  height: 100%;
-  animation: slideShow 50s infinite; /* Changed to 50s for 10 seconds per image */
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    animation: slideShow 50s infinite; /* Changed to 50s for 10 seconds per image */
 }
 .hero-gallery img {
-  width: 20%;
-  object-fit: cover;
+    width: 20%;
+    object-fit: cover;
 }
 
 /* Animation gallery *************************/
 @keyframes slideShow {
-  0%,
-  20% {
-    transform: translateX(0);
+    0%,
+    20% {
+      transform: translateX(0);
+    }
+    25%,
+    45% {
+      transform: translateX(-20%);
+    }
+    50%,
+    70% {
+      transform: translateX(-40%);
+    }
+    75%,
+    95% {
+      transform: translateX(-60%);
+    }
+    100% {
+      transform: translateX(-80%);
+    }
   }
-  25%,
-  45% {
-    transform: translateX(-20%);
+  
+/* Burger *****************/
+#menu-burger, .hamburger, .close-menu{  
+    display: none;
+}
+
+/* Nav */
+#nav-ban{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgba(52, 152, 219, 0.8);
+    width: 100%;
+    height: 10vh;
+    margin: 0 auto;     
+    z-index: 20;  
+    border: 2px solid var(--light-blue);
+    border-radius: 5px;
   }
-  50%,
-  70% {
-    transform: translateX(-40%);
-  }
-  75%,
-  95% {
-    transform: translateX(-60%);
-  }
-  100% {
-    transform: translateX(-80%);
-  }
+#nav-ban li{
+    list-style-type: none;
+    padding-right: 2%;
+}
+#nav-ban a{
+    font-size: calc(0.7vw + 14px);
+    color: white;
+    text-decoration: none;   
 }
 
 /* Main ******************/
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-#fleuves h2, #bateaux h2{
-  text-align: center;
-}
-/* .river-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-} */
-
-.river-list, .boat-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 2rem;
-}
-.river-card, .boat-card {
-  width: calc(33.33% - 1rem);
-  margin-bottom: 2rem;
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-.river-card-content {
-  padding: 1rem;
-}
-.river-card:hover, .boat-card:hover {
-  scale: 1.01;
-}
-.river-card img, .boat-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.river-card h2, .boat-card h2 {
-  padding: 1rem;
-  margin: 0;
-  text-align: center;
-  color: var(--primary-color);
-  font-size: 1.5rem;
-}
-.river-card, .boat-card {
-  width: calc(50% - 1rem);
-}
-.river-card p {
-  margin-bottom: 1rem;
-}
-.btn-plus {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  width: 12vw;
-  background: var(--medium-blue);  
-  color: #fff;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  white-space: nowrap;
-}
-.btn-plus:hover {
-  color: white;
-}
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  #fleuves h2, #bateaux h2{
+    text-align: center;
+  }
+  /* .river-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  } */
+  
+  .river-list, .boat-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .river-card, .boat-card {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .river-card-content {
+    padding: 1rem;
+  }
+  .river-card:hover, .boat-card:hover {
+    scale: 1.01;
+  }
+  .river-card img, .boat-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .river-card h2, .boat-card h2 {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+  }
+  .river-card, .boat-card {
+    width: calc(50% - 1rem);
+  }
+  .river-card p {
+    margin-bottom: 1rem;
+  }
+  .boat-card .btn-plus{
+    margin-bottom: 2.7%;
+  }
+  .btn-plus {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 15vw;
+    background: var(--medium-blue);  
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+  .btn-plus:hover {
+    color: white;
+  }
+  
+  /*********************/
+  @media (min-width: 768px) and (max-width: 992px){
+  #nav-ban{
+    padding-right: 2.5vw;
+    white-space: nowrap;   
+  }
+  }
+  
+  /**********************/
+  @media (min-width: 375px) and (max-width: 767px){
+  .hero-gallery {
+    height: 110%;
+  }
+  .logo_titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-3%);
+  }
+  .logo_titre .logo {   /* gouvernail */
+    width: 5rem;
+  }
+  .logo_titre .logo, .h1-home{ 
+    right: 1rem;
+  }
+  .h1-home {
+    font-size: calc(4.1vw + 10px);
+    white-space: nowrap;
+  }
+  .hero-text{
+    text-align: center;
+  }
+  .icon-wrapper{
+    align-items: center;
+    margin-top: .5%;
+    height: 2rem !important;
+    width: 2rem !important;
+  }
+  .icon-wrapper svg {
+    scale: 1.5; 
+    padding-bottom: 25%;
+  }
+  #nav-ban{
+    display: none;
+  }
+  .cta-button{
+    margin: 0 auto;
+  }
+  
+  /* hamburger ******************/
+  .hamburger{
+    display: block;  
+  }
+  .hamburger i{
+    display: flex;
+    justify-content: center;
+    transform: scale(2.5);
+    color: white;
+    margin-top: -4vh;
+    margin-bottom: 5rem;  
+  }
+  #menu-burger {
+    display: block;
+    line-height: 2.5;
+    z-index: 20;
+    backdrop-filter: blur(12px);
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    background-color: rgba(52, 152, 219, .8);
+    border-radius: 30px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    position: absolute;
+    min-height: 56vh;
+    width: 100vw;
+    top: 0;
+  }
+  .menu-open #menu-burger {
+    transform: translateX(0);
+  }
+  #menu-burger li{
+    transform: translateX(-3%);
+    list-style-type: none; 
+    margin-top: 5vh; 
+  }
+  #menu-burger li a{  
+    display: flex;
+    justify-content: center;
+    text-decoration: none; 
+    color: #fff; 
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  /* Styling de la croix avec animation */
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 20;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Affichage de la croix avec transition */
+  .menu-active .close-menu {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Main ******************/
+  .river-card, .boat-card{  
+    width: 100%; 
+  }
+  .btn-plus{
+    width: 30vw;
+  }
+  
+  footer p {
+    font-size: calc(1.3vw + 10px) ;
+    white-space: pre-wrap;
+  }
+  }
