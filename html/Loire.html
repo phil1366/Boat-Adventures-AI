@@ -41,6 +41,18 @@
     </div>
   </nav>
 
+  <!-- loupe -->
+  <div class="search-icon" aria-label="Rechercher">🔍</div>
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Rechercher...">
+    <button class="close-search" aria-label="Fermer la recherche">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
   <!-- Menu burger -->
   <div class="burger">
     <i class="fa-solid fa-bars"></i>
@@ -49,7 +61,7 @@
   <main>
     <div class="river-info">
       <div class="river-description">
-        <h2 id="fleuve-loire">Découvrez la loire</h2> <!-- id pour champ de recherche -->
+        <h2>Découvrez la loire</h2>
         <p>La Loire, le plus long fleuve de France, vous invite à une croisière inoubliable à travers le cœur historique
           et culturel du pays. Surnommée "le jardin de la France", la vallée de la Loire est réputée pour ses paysages
           pittoresques, ses vignobles renommés et ses majestueux châteaux Renaissance.</p>
@@ -68,7 +80,7 @@
           loading="lazy">
       </div>
     </div>
-    
+
     <div class="fullscreen-image">
       <span class="close-button">&times;</span>
       <img src="" alt="">
@@ -88,7 +100,7 @@
       </div>
       <img src="../src/images/La_Loire/panorama-paysage-de-loire.jpg" alt="paysage-de-loire" loading="lazy">
     </div>
- 
+
     <div class="cta-resa-loire">
       <a href="../html/reservations.html" class="btn"><span>Réserver votre croisière sur la Loire</span></a>
     </div>
@@ -135,45 +147,45 @@
     </div>
   </footer>
 
-  <script src="/style.js"></script>
+  <script src="/script2.js"></script>
 
-  <!-- Grossissement image --> 
+  <!-- Grossissement image -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const gallery = document.querySelector('.river-gallery');
-        const fullscreenImage = document.querySelector('.fullscreen-image');
-        const fullscreenImg = fullscreenImage.querySelector('img');
-        const closeButton = document.querySelector('.close-button');
+    document.addEventListener('DOMContentLoaded', function () {
+      const gallery = document.querySelector('.river-gallery');
+      const fullscreenImage = document.querySelector('.fullscreen-image');
+      const fullscreenImg = fullscreenImage.querySelector('img');
+      const closeButton = document.querySelector('.close-button');
 
-        gallery.addEventListener('click', function(e) {
-            if (e.target.tagName === 'IMG') {
-                fullscreenImg.src = e.target.src;
-                fullscreenImg.alt = e.target.alt;
-                fullscreenImage.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-
-        function closeFullscreen() {
-            fullscreenImage.classList.remove('active');
-            document.body.style.overflow = '';
+      gallery.addEventListener('click', function (e) {
+        if (e.target.tagName === 'IMG') {
+          fullscreenImg.src = e.target.src;
+          fullscreenImg.alt = e.target.alt;
+          fullscreenImage.classList.add('active');
+          document.body.style.overflow = 'hidden';
         }
+      });
 
-        closeButton.addEventListener('click', closeFullscreen);
+      function closeFullscreen() {
+        fullscreenImage.classList.remove('active');
+        document.body.style.overflow = '';
+      }
 
-        fullscreenImage.addEventListener('click', function(e) {
-            if (e.target === fullscreenImage) {
-                closeFullscreen();
-            }
-        });
+      closeButton.addEventListener('click', closeFullscreen);
 
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeFullscreen();
-            }
-        });
+      fullscreenImage.addEventListener('click', function (e) {
+        if (e.target === fullscreenImage) {
+          closeFullscreen();
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeFullscreen();
+        }
+      });
     });
- </script>
+  </script>
 
 </body>
 

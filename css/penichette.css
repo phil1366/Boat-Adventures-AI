@@ -15,6 +15,7 @@ main {
     margin: 0 auto; 
 }
 
+/* Boat ******************/
 .boat-details {
     background-color: white;
     padding: 2rem;
@@ -51,13 +52,11 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
-
 .features-list li {
     margin-bottom: 0.5rem;
     padding-left: 1.5rem;
     position: relative;
 }
-
 .features-list li::before {
     content: "✓";
     color: red;

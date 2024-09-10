@@ -13,6 +13,10 @@ nav{
   top: 0; 
 }
 
+.close-search {  /* Loupe */
+  top: 38% !important;  
+}
+
 section{  
   background-image: url("../src/images/Bateau_sur_fleuve_nocturne.png"); 
   background-repeat: no-repeat;     
@@ -61,8 +65,7 @@ section{
   font-size: 1.1rem;
 }
 #contact-info a{
-  font-size: calc(1.5rem - 8px);
-  
+  font-size: calc(1.5rem - 8px);  
 }
   
 form {

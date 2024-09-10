@@ -24,6 +24,18 @@ nav{
     top: 0; 
 }
 
+/* Styles pour la loupe et champ special fleuves */
+.search-container {
+  top: 12.5vh;  
+  width: 100vw;
+  height: 27%;
+  z-index: 50;
+  border: none;
+}
+.search-icon{
+  top: 14rem ; 
+}
+
 /* Burger *****************/
 .burger, .close-menu{
     display: none;

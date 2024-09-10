@@ -34,6 +34,18 @@ header {
   letter-spacing: 2px;
 }
 
+/* Styles pour la loupe et champ special fleuves */
+.search-container {
+  top: 12.5vh;  
+  width: 100vw;
+  height: 27%;
+  z-index: 50;
+  border: none;
+}
+.search-icon{
+  top: 14rem ; 
+}
+
 /* Main *********************/
 main {
   width: 100%;
