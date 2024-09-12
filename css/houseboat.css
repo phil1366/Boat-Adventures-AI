@@ -101,11 +101,16 @@ main {
     margin-top: 2rem;
 }
 .destinations h3 {
+    text-align: center;
     color: var(--medium-blue);
+}
+.destinations p {
+    font-size: 1.3rem;
+    text-align: center;
 }
 .destinations ul {
     columns: 2;
-    padding-left: 1.5rem;
+    padding-left: 14.5vw;
 }
 
 /* Newsletter *********************/

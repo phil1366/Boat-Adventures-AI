@@ -25,6 +25,28 @@
        photoGallery.classList.remove('hidden');
    });
 
+// Bateaux img-growth ***********************
+    function openFullscreen(imgElement) {
+        const fullscreenContainer = document.createElement('div');
+        fullscreenContainer.classList.add('fullscreen-image-container');
+        
+        const fullscreenImg = document.createElement('img');
+        fullscreenImg.src = imgElement.src;
+        
+        const closeBtn = document.createElement('span');
+        closeBtn.innerHTML = '&times;';
+        closeBtn.classList.add('close-btn');
+        closeBtn.onclick = () => fullscreenContainer.remove();
+        
+        fullscreenContainer.appendChild(fullscreenImg);
+        fullscreenContainer.appendChild(closeBtn);
+        document.body.appendChild(fullscreenContainer);
+
+        setTimeout(() => {
+            fullscreenContainer.classList.add('active');
+        }, 10); // Lancer l'animation
+    }
+
 
 
 

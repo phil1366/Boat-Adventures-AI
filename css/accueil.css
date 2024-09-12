@@ -232,11 +232,11 @@ main {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s ease;    
   }
   .river-card-content {
     padding: 1rem;
+    text-align: center;
   }
   .river-card:hover, .boat-card:hover {
     scale: 1.01;
@@ -259,7 +259,22 @@ main {
   .river-card p {
     margin-bottom: 1rem;
   }
+  .boat-card p{
+    text-align: center;
+    font-size: 1.2rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .boat-features {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+  }
   .boat-card .btn-plus{
+    margin-top: 2rem;
     margin-bottom: 2.7%;
   }
   .btn-plus {
@@ -277,6 +292,40 @@ main {
   .btn-plus:hover {
     color: white;
   }
+
+  /* Style pour l'image en plein écran */
+.fullscreen-image-container {
+  display: none; /* Cacher par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreen-image-container img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.fullscreen-image-container.active {
+  display: flex; /* Afficher lorsque actif */
+}
+
+.fullscreen-image-container .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
   
   /*********************/
   @media (min-width: 768px) and (max-width: 992px){

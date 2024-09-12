@@ -66,7 +66,7 @@
             <li><a href="../html/souvenirs.html">Souvenirs</a></li>
             <li><a href="../html/reservations.html">Réservations</a></li>
             <li><a href="../html/contact.html">Contact</a></li>
-        </ul>        
+        </ul>
     </header>
 
     <!-- Menu burger  placé différement des autres pages -->
@@ -181,37 +181,65 @@
 
             <div class="boat-list">
                 <div class="boat-card">
-                    <img src="../src/images/Nos_bateaux/penichette.png" alt="penichette" loading="lazy">
+                    <img src="../src/images/Nos_bateaux/penichette.png" alt="penichette" loading="lazy"
+                        onclick="openFullscreen(this)">
                     <h2>Pénichette</h2>
+                    <p>Bateau confortable idéal pour les couples ou petites familles.</p>
+                    <div class="boat-features">
+                        <span>2-4 personnes</span>
+                        <span>Longueur: 9m</span>
+                    </div>
                     <a href="../html/penichette.html" class="btn-plus">En savoir plus</a>
                 </div>
                 <div class="boat-card">
                     <img src="../src/images/Nos_bateaux/Houseboat.png" alt="bateau spacieux pour 4 à 6 personnes"
-                        loading="lazy">
+                        loading="lazy" onclick="openFullscreen(this)">
                     <h2>Houseboat</h2>
+                    <p>Véritable maison flottante pour des vacances en grand groupe.</p>
+                    <div class="boat-features">
+                        <span>6-10 personnes</span>
+                        <span>Longueur: 15m</span>
+                    </div>
                     <a href="../html/houseboat.html" class="btn-plus">En savoir plus</a>
                 </div>
                 <div class="boat-card">
                     <img src="../src/images/Nos_bateaux/Penichette-luxe.jpg"
-                        alt="Pénichette de luxe pour 6 à 8 personnes" loading="lazy">
+                        alt="Pénichette de luxe pour 6 à 8 personnes" loading="lazy" onclick="openFullscreen(this)">
                     <h2>Pénichette luxe</h2>
+                    <p>Véritable maison flottante pour des vacances en grand groupe.</p>
+                    <div class="boat-features">
+                        <span>6-10 personnes</span>
+                        <span>Longueur: 15m</span>
+                    </div>
                     <a href="#" class="btn-plus">En savoir plus</a>
                 </div>
                 <div class="boat-card">
                     <img src="../src/images/Nos_bateaux/Catamaran_bateau-stable-pour-4.png"
-                        alt="Catamaran, bateau stable pour 4 à 6 personnes" width="300" height="200">
+                        alt="Catamaran, bateau stable pour 4 à 6 personnes" loading="lazy"
+                        onclick="openFullscreen(this)">
                     <h2>Catamaran</h2>
+                    <p>Bateau stable offrant un grand espace de vie et une excellente visibilité.</p>
+                    <div class="boat-features">
+                        <span>4-6 personnes</span>
+                        <span>Longueur: 11m</span>
+                    </div>
                     <a href="#" class="btn-plus">En savoir plus</a>
                 </div>
                 <div class="boat-card">
-                    <img src="../src/images/Nos_bateaux/bateau-sans-permis.jpg" alt="bateau sans permis" loading="lazy">
+                    <img src="../src/images/Nos_bateaux/bateau-sans-permis.jpg" alt="bateau sans permis" loading="lazy"
+                        onclick="openFullscreen(this)">
                     <h2>bateau sans permis</h2>
                     <a href="#" class="btn-plus">En savoir plus</a>
                 </div>
                 <div class="boat-card">
                     <img src="../src/images/Nos_bateaux/narrowboat.jpg"
-                        alt="Narrowboat, bateau étroit pour 2 à 4 personnes" loading="lazy">
+                        alt="Narrowboat, bateau étroit pour 2 à 4 personnes" loading="lazy" onclick="openFullscreen(this)">
                     <h2>Narrowboat</h2>
+                    <p>Bateau étroit parfait pour naviguer sur les canaux plus resserrés.</p>
+                    <div class="boat-features">
+                        <span>2-4 personnes</span>
+                        <span>Longueur: 10m</span>
+                    </div>
                     <a href="#" class="btn-plus">En savoir plus</a>
                 </div>
             </div>
@@ -264,44 +292,44 @@
     <script src="/scriptaccueil.js"></script>
 
     <script> /// LOUPE *****************************/
-    // Ouvrir/fermer la barre de recherche
-    document.querySelector('.research-icone').addEventListener('click', () =>{
-    document.querySelector('.research-contain').classList.toggle('active');
-    });
-   
-    document.querySelector('.fermeture').addEventListener('click', function() {
-    document.querySelector('.research-contain').classList.remove('active');
-    });
-   
-   const keywordPages = {
-       'loire': 'http://127.0.0.1:5501/html/Loire.html', 'Loire': 'http://127.0.0.1:5501/html/Loire.html',
-       'seine': 'http://127.0.0.1:5501/html/Seine.html', 'Seine': 'http://127.0.0.1:5501/html/Seine.html',
-       'paris': 'http://127.0.0.1:5501/html/Seine.html', 'Paris': 'http://127.0.0.1:5501/html/Seine.html',
-       'louvre': 'http://127.0.0.1:5501/html/Seine.html', 'Louvre': 'http://127.0.0.1:5501/html/Seine.html',
-       'fleuve': 'http://127.0.0.1:5501/html/accueil.html#fleuves','fleuves': 'http://127.0.0.1:5501/html/accueil.html#fleuves',
-       'Fleuve': 'http://127.0.0.1:5501/html/accueil.html#fleuves','Fleuves': 'http://127.0.0.1:5501/html/accueil.html#fleuves',
-       'bateaux': 'http://127.0.0.1:5501/html/accueil.html#bateaux','bateau': 'http://127.0.0.1:5501/html/accueil.html#bateaux',
-       'Bateaux': 'http://127.0.0.1:5501/html/accueil.html#bateaux','Bateau': 'http://127.0.0.1:5501/html/accueil.html#bateaux',
-       'penichette': 'http://127.0.0.1:5501/html/penichette.html', 'Penichette': 'http://127.0.0.1:5501/html/penichette.html',
-       'pénichette': 'http://127.0.0.1:5501/html/penichette.html', 'peniche': 'http://127.0.0.1:5501/html/penichette.html',
-       'Peniche': 'http://127.0.0.1:5501/html/penichette.html', 
-       'Houseboat': 'http://127.0.0.1:5501/html/houseboat.html', 'houseboat': 'http://127.0.0.1:5501/html/houseboat.html',
-       'chateau': 'http://127.0.0.1:5501/html/Loire.html', 'chateaux': 'http://127.0.0.1:5501/html/Loire.html',
-       'croisiere': 'http://127.0.0.1:5501/html/accueil.html#fleuves', 'canal': 'http://127.0.0.1:5501/html/accueil.html#fleuves',    
-   };
-   
-    document.querySelector('.research-inp').addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            const keyword = event.target.value.trim().toLowerCase();
-   
-            // Vérifier si le mot-clé a une page correspondante
-            if (keyword in keywordPages) {
-                window.location.href = keywordPages[keyword];
-            } else {
-                alert('Mot-clé non reconnu. Essayez l\'un des mots-clés valides.');
+        // Ouvrir/fermer la barre de recherche
+        document.querySelector('.research-icone').addEventListener('click', () => {
+            document.querySelector('.research-contain').classList.toggle('active');
+        });
+
+        document.querySelector('.fermeture').addEventListener('click', function () {
+            document.querySelector('.research-contain').classList.remove('active');
+        });
+
+        const keywordPages = {
+            'loire': 'http://127.0.0.1:5501/html/Loire.html', 'Loire': 'http://127.0.0.1:5501/html/Loire.html',
+            'seine': 'http://127.0.0.1:5501/html/Seine.html', 'Seine': 'http://127.0.0.1:5501/html/Seine.html',
+            'paris': 'http://127.0.0.1:5501/html/Seine.html', 'Paris': 'http://127.0.0.1:5501/html/Seine.html',
+            'louvre': 'http://127.0.0.1:5501/html/Seine.html', 'Louvre': 'http://127.0.0.1:5501/html/Seine.html',
+            'fleuve': 'http://127.0.0.1:5501/html/accueil.html#fleuves', 'fleuves': 'http://127.0.0.1:5501/html/accueil.html#fleuves',
+            'Fleuve': 'http://127.0.0.1:5501/html/accueil.html#fleuves', 'Fleuves': 'http://127.0.0.1:5501/html/accueil.html#fleuves',
+            'bateaux': 'http://127.0.0.1:5501/html/accueil.html#bateaux', 'bateau': 'http://127.0.0.1:5501/html/accueil.html#bateaux',
+            'Bateaux': 'http://127.0.0.1:5501/html/accueil.html#bateaux', 'Bateau': 'http://127.0.0.1:5501/html/accueil.html#bateaux',
+            'penichette': 'http://127.0.0.1:5501/html/penichette.html', 'Penichette': 'http://127.0.0.1:5501/html/penichette.html',
+            'pénichette': 'http://127.0.0.1:5501/html/penichette.html', 'peniche': 'http://127.0.0.1:5501/html/penichette.html',
+            'Peniche': 'http://127.0.0.1:5501/html/penichette.html',
+            'Houseboat': 'http://127.0.0.1:5501/html/houseboat.html', 'houseboat': 'http://127.0.0.1:5501/html/houseboat.html',
+            'chateau': 'http://127.0.0.1:5501/html/Loire.html', 'chateaux': 'http://127.0.0.1:5501/html/Loire.html',
+            'croisiere': 'http://127.0.0.1:5501/html/accueil.html#fleuves', 'canal': 'http://127.0.0.1:5501/html/accueil.html#fleuves',
+        };
+
+        document.querySelector('.research-inp').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                const keyword = event.target.value.trim().toLowerCase();
+
+                // Vérifier si le mot-clé a une page correspondante
+                if (keyword in keywordPages) {
+                    window.location.href = keywordPages[keyword];
+                } else {
+                    alert('Mot-clé non reconnu. Essayez l\'un des mots-clés valides.');
+                }
             }
-        }
-    });
+        });
     </script>
 
 </body>

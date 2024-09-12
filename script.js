@@ -1,53 +1,53 @@
 // SEINE img-growth ***********************
 document.addEventListener('DOMContentLoaded', function() { //Attends que le DOM soit entièrement chargé avant d'exécuter le code
-    const navLinks = document.querySelectorAll('nav a');
-        
-    navLinks.forEach(link => {  //Parcourt chaque lien de navigation
-        link.addEventListener('click', function(e) {
-        e.preventDefault();
-    //Récupère l'ID de la section cible depuis l'attribut href du lien, sans le '#'
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId); //Sélectionne l'élément cible par son ID
-    //Récupère la hauteur de la barre de navigation pour ajuster le défilement
-    const navHeight = document.querySelector('nav').offsetHeight;       
-    //Calcule la position de l'élément cible par rapport au haut de la page, en tenant compte de la hauteur de la navigation
-    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;            
-    //Fait défiler la page vers la position calculée avec un effet de défilement fluide
-        window.scrollTo({ 
-        top: targetPosition,
-        behavior: 'smooth'
-        });
-        });
-    });
+const navLinks = document.querySelectorAll('nav a');
     
-    const galleryImages = document.querySelectorAll('.image-gallery img');
-        
-    galleryImages.forEach(img => {  //Parcourt chaque image de la galerie
-    //Add un écouteur d'événement pour gérer le clic sur chaque image
-    img.addEventListener('click', function() {
-    //Récupère le texte alternatif (alt) de l'image cliquée
-    const altText = this.alt;
-        alert(`Image: ${altText}\nCliquez pour voir en plein écran (fonctionnalité à venir)`);
-        });
+navLinks.forEach(link => {  //Parcourt chaque lien de navigation
+    link.addEventListener('click', function(e) {
+    e.preventDefault();
+//Récupère l'ID de la section cible depuis l'attribut href du lien, sans le '#'
+const targetId = this.getAttribute('href').substring(1);
+const targetElement = document.getElementById(targetId); //Sélectionne l'élément cible par son ID
+//Récupère la hauteur de la barre de navigation pour ajuster le défilement
+const navHeight = document.querySelector('nav').offsetHeight;       
+//Calcule la position de l'élément cible par rapport au haut de la page, en tenant compte de la hauteur de la navigation
+const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;            
+//Fait défiler la page vers la position calculée avec un effet de défilement fluide
+    window.scrollTo({ 
+    top: targetPosition,
+    behavior: 'smooth'
     });
-    
-    //Sélectionne le CTA sur la page
-    const ctaButton = document.querySelector('.cta-button');
-    //Empêche le comportement par défaut du bouton (ne pas soumettre de formulaire, par exemple)
-        e.preventDefault();
-        ctaButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('Merci de votre intérêt ! Notre système de réservation sera bientôt disponible. En attendant, n\'hésitez pas à nous contacter pour toute demande de renseignements.');
-        });
     });
+});
+
+const galleryImages = document.querySelectorAll('.image-gallery img');
     
-    /* Attente du chargement du DOM : Le code s'exécute une fois que le DOM est entièrement chargé.
-    Gestion des liens de navigation : Lorsque les liens de la navigation sont cliqués, le comportement par défaut est annulé, 
-    et un défilement fluide vers la section cible est déclenché.
-    Interaction avec les images de la galerie : Un clic sur une image de la galerie affiche une alerte avec son texte alternatif 
-    et un message indiquant une future fonctionnalité.
-    Interaction avec le bouton CTA : Le clic sur le bouton CTA empêche l'action par défaut et affiche un message informant que
-    le système de réservation est en développement. */    
+galleryImages.forEach(img => {  //Parcourt chaque image de la galerie
+//Add un écouteur d'événement pour gérer le clic sur chaque image
+img.addEventListener('click', function() {
+//Récupère le texte alternatif (alt) de l'image cliquée
+const altText = this.alt;
+    alert(`Image: ${altText}\nCliquez pour voir en plein écran (fonctionnalité à venir)`);
+    });
+});
+
+//Sélectionne le CTA sur la page
+const ctaButton = document.querySelector('.cta-button');
+//Empêche le comportement par défaut du bouton (ne pas soumettre de formulaire, par exemple)
+    e.preventDefault();
+    ctaButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    alert('Merci de votre intérêt ! Notre système de réservation sera bientôt disponible. En attendant, n\'hésitez pas à nous contacter pour toute demande de renseignements.');
+    });
+});
+
+/* Attente du chargement du DOM : Le code s'exécute une fois que le DOM est entièrement chargé.
+Gestion des liens de navigation : Lorsque les liens de la navigation sont cliqués, le comportement par défaut est annulé, 
+et un défilement fluide vers la section cible est déclenché.
+Interaction avec les images de la galerie : Un clic sur une image de la galerie affiche une alerte avec son texte alternatif 
+et un message indiquant une future fonctionnalité.
+Interaction avec le bouton CTA : Le clic sur le bouton CTA empêche l'action par défaut et affiche un message informant que
+le système de réservation est en développement. */    
 //************************************/   
     
 
