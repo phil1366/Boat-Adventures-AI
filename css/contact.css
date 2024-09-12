@@ -13,10 +13,6 @@ nav{
   top: 0; 
 }
 
-.close-search {  /* Loupe */
-  top: 38% !important;  
-}
-
 section{  
   background-image: url("../src/images/Bateau_sur_fleuve_nocturne.png"); 
   background-repeat: no-repeat;     
@@ -40,7 +36,7 @@ section{
 .contact-title p{
   text-align: center;
   font-size: 1.2rem;
-  width: 65%;
+  width: 82%;
   margin: 0 auto;
 }
 .contact-form {
@@ -65,7 +61,7 @@ section{
   font-size: 1.1rem;
 }
 #contact-info a{
-  font-size: calc(1.5rem - 8px);  
+  font-size: 1.1rem;  
 }
   
 form {
@@ -115,6 +111,41 @@ input[type="submit"]{
 }
 
 /***************************/
+/***************************/
+@media (min-width: 768px) and (max-width: 992px){
+#menu{
+  padding-right: 4.5rem;
+  white-space: nowrap;
+}
+nav ul li {
+  margin: 0 .7rem !important;
+}
+nav ul li a{
+  font-size: calc(.6vw + 15px) !important;
+}
+.search-container {  
+  position: absolute;
+  height: 32% !important;
+}
+.search-icon{  /* Loupe */
+  top: 2.9rem !important;
+  right: 3.5% !important;
+}
+.close-search{  
+  top: 45%!important;
+}
+.contact-title p{
+  font-size: calc(2.3vw + 2px) !important;
+  width: 80%;
+}
+#contact-container h2, #contact-info h2{
+  font-size: calc(3.5vw - 5px) !important;
+}
+
+}
+
+/***************************/
+/***************************/
 @media (min-width: 375px) and (max-width: 767px){
   .burger {    
     color: #000 !important;   
@@ -122,8 +153,7 @@ input[type="submit"]{
   }
  nav{
    position: inherit;
-  }
-  
+  }   
   #contact-container{
     height: 130vh;
   }
@@ -159,6 +189,9 @@ input[type="submit"]{
   }
   #contact-info h2{
     margin-bottom: 1rem;
+  }
+  #contact-info a{
+    font-size: inherit;
   }
   #contact-info span{
     font-size: 1.05rem;

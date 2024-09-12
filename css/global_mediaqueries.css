@@ -14,7 +14,7 @@ nav{
 }
 #menu {
     flex-direction: column;
-    height: 400px;
+    height: 445px;
     width: 100%;
     z-index: 20;
     line-height: 2.5;
@@ -28,6 +28,7 @@ nav{
     border-radius: 30px;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
+    padding: 0;
 }
 .menu-open #menu {
     transform: translateX(0);
@@ -35,6 +36,20 @@ nav{
 #menu a {
     font-size: 1.3rem;
     white-space: nowrap;
+    position: relative;
+    top: -2rem;
+}
+ /* Loupe ***************/
+ .search-icon{
+    display: none;    
+    margin-top: -6rem;
+    position: absolute;    
+    top: 30rem; 
+    left: 62vw;   
+    cursor: pointer;
+}.menu-open .search-icon {
+    display: block;
+    
 }
 
 /* Styling de la croix avec animation */

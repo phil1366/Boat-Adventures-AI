@@ -408,8 +408,7 @@ main {
   .menu-open .research-icone {
     /* border: solid red 5px; */
     display: block;
-    position: absolute;
-    
+    position: absolute;    
     top: 33rem;   
     scale: 1.8;
     cursor: pointer;
