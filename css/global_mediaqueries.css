@@ -1,3 +1,13 @@
+/* Menu */
+@media (min-width: 768px) and (max-width: 992px){
+#menu {
+    margin-right: 3rem;
+}
+.search-icon {    
+   right: 3% !important;
+}
+}
+
 /* Menu burger ***************/
 @media (min-width: 375px) and (max-width: 767px) {  
 nav{
@@ -39,17 +49,18 @@ nav{
     position: relative;
     top: -2rem;
 }
- /* Loupe ***************/
- .search-icon{
+
+/* Loupe ***************/
+.search-icon{
     display: none;    
     margin-top: -6rem;
     position: absolute;    
     top: 30rem; 
     left: 62vw;   
     cursor: pointer;
-}.menu-open .search-icon {
-    display: block;
-    
+}
+.menu-open .search-icon {
+    display: block;    
 }
 
 /* Styling de la croix avec animation */

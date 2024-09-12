@@ -38,6 +38,9 @@ main {
 .houseboat-description {
     margin-bottom: 2rem;
 }
+.houseboat-description p{
+    text-align: center;
+}
 
 .features-grid {
     display: grid;
@@ -54,6 +57,12 @@ main {
 .feature-card h4 {
     color: var(--medium-blue);
     margin-top: 0;
+    text-align: center;
+}
+.feature-card li{
+    /* border: solid red 5px; */
+    margin-left: -2rem;
+    width: 30vw;
 }
 
 /* CTA */
@@ -91,6 +100,38 @@ main {
 .img-houseboat img:hover {
     transform: scale(1.05);
 }
+/* Style Houseboat pour l'image en plein écran */
+.fullscreen-image-container {
+    display: none; /* Cacher par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.fullscreen-image-container img {
+    object-fit: contain;
+    max-width: 90%;
+    max-height: 90%;
+    min-width: 800px;
+    min-height: 600px;
+    border-radius: 8px;
+}
+.fullscreen-image-container.active {
+    display: flex; /* Afficher lorsque actif */
+}
+.fullscreen-image-container .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
 
 /* Destinations ****************/
 .destinations {
@@ -110,7 +151,10 @@ main {
 }
 .destinations ul {
     columns: 2;
-    padding-left: 14.5vw;
+    padding-left: 13vw;
+}
+.destinations li {
+    font-size: 1.2rem;
 }
 
 /* Newsletter *********************/
@@ -185,7 +229,7 @@ main {
   }
 
 /***************************/
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 768px) and (max-width: 992px){ 
 .cta-boat {
     width: 35%;
 }

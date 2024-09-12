@@ -45,7 +45,6 @@
   border: 2px solid var(--light-blue);  
 }
 
-
 #scroll-to-top i {
   font-size: 1.5rem;
 }
@@ -262,13 +261,13 @@ main {
   .boat-card p{
     text-align: center;
     font-size: 1.2rem;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
   }
   .boat-features {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 75%;
     margin: 1rem auto;
     font-size: 1.1rem;
     color: var(--secondary-color);
@@ -293,7 +292,7 @@ main {
     color: white;
   }
 
-  /* Style pour l'image en plein écran */
+/* Bateaux Style pour image plein écran */
 .fullscreen-image-container {
   display: none; /* Cacher par défaut */
   position: fixed;
@@ -306,17 +305,16 @@ main {
   align-items: center;
   z-index: 1000;
 }
-
 .fullscreen-image-container img {
   max-width: 90%;
   max-height: 90%;
+  min-width: 600px; 
+  min-height: 600px;
   object-fit: contain;
 }
-
 .fullscreen-image-container.active {
   display: flex; /* Afficher lorsque actif */
 }
-
 .fullscreen-image-container .close-btn {
   position: absolute;
   top: 10px;
@@ -325,20 +323,19 @@ main {
   color: white;
   cursor: pointer;
 }
-
   
-  /*********************/
-  @media (min-width: 768px) and (max-width: 992px){
-  #nav-ban{
-    padding-right: 8.5vw;
-    white-space: nowrap;   
-  }
-  .fermeture{
-    margin-top: -.5rem;
-  }
-  }
+/*********************/
+@media (min-width: 768px) and (max-width: 992px){
+#nav-ban{
+  padding-right: 8.5vw;
+  white-space: nowrap;   
+}
+.fermeture{
+  margin-top: -.5rem;
+}
+}
   
-  /**********************/
+/**********************/
   @media (min-width: 375px) and (max-width: 767px){
   .hero-gallery {
     height: 110%;
