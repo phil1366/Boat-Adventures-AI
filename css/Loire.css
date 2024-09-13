@@ -67,6 +67,9 @@ main {
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.river-description h2{
+  text-align: center;
+}
 
 /* Loire - img growth *********************/
 .river-gallery{
@@ -255,7 +258,26 @@ button[type="submit"]:hover {
 }
 .search-icon{    
   right: 10%;
-  top: -10vh;
+  top: 5vh !important;
+}
+.highlights{
+  flex-direction: column;  
+}
+.cruising{
+  text-align: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+.highlights ul li::marker{
+  content: ""; 
+}
+.highlights h2{
+  font-size: calc(.3vw + 20px) !important; 
+  margin-bottom: 1.5rem;
+}
+.highlights img{
+  width: 90%;
+  margin: 0 auto;
 }
 }
 
@@ -280,8 +302,8 @@ nav{
   height: 45%;
 }    
 .search-icon{       
-  right: 10%;
-  top: -10vh;     
+  left: 61vw;
+  top: 39rem !important;     
 }
 .close-search {    
   right: 60px;
@@ -304,38 +326,35 @@ nav{
 }
 
 .highlights{    
-  flex-direction: column;
-  width: 100%;
+  flex-direction: column;  
 }
 .cruising{
-  display: flex;
   width: 100%;
 }
 .highlights h2{  
-  font-size: calc(2.2vw + 10px);    
+  font-size: calc(1.6vw + 15px);    
   text-align: center;    
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
-.highlights ul{      
-  width: 75vw;
-  margin: 0 auto;
-  margin-bottom: 30px;   
+.highlights ul{  
+  margin-bottom: 30px;    
 }
 .highlights ul li{
-  font-size: calc(1vw + 9px);
+  font-size: 1.1rem;
+  text-align: center; 
+}
+.highlights ul li::marker{
+  content: ""; 
 }
 .highlights img{
   width: 100%;    
 }
-
 .cta-resa-loire span{
-  /* border: solid red 5px; */
   font-size: calc(2vw + .5rem) !important; 
 }
+.cta-resa-loire .btn span{
+  font-size: calc(1vw + 17px) !important;
 }
-
-/**********************/
-@media (min-width: 375px) and (max-width: 463px) {
 footer p{
   font-size: .85rem;
 }
