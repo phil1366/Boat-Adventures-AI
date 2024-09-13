@@ -28,6 +28,7 @@ main {
     font-weight: 600;
     font-size: 1.5rem;
     padding-bottom: 20px;
+    text-align: center;
 }
 .houseboat-image {
     width: 100%;    
@@ -251,6 +252,10 @@ main {
 .houseboat-description p, .feature-card h4{
     text-align: center;
 }
+.feature-card li {
+    /* border: solid red 5px; */
+    width: 65vw !important;
+}
 .cta-boat {
     width: 55%;
     font-size: 1rem;
@@ -258,6 +263,9 @@ main {
 }
 .destinations{
     text-align: center;
+}
+.destinations p{
+   font-size: calc(1.5rem - 5px);
 }
 .destinations h3{
     font-size: calc(1.5vw + .8rem)
