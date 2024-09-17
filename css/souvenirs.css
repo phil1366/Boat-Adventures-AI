@@ -223,6 +223,10 @@ nav{
 .photo-gallery {
   grid-template-columns: repeat(1, 1fr);
 }
+.fullscreen-image img{
+  object-fit: none;
+  min-height: 800px;
+}
 footer p{
   font-size: calc(1.5vw + 7px);
 }
