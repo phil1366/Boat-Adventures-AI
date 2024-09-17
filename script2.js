@@ -23,6 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
  document.querySelector('.search-container').classList.remove('active');
  });
 
+ // Option de fermeture avec la touche "Échap"
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+      document.querySelector('.search-container').classList.remove('active');
+  }
+});
+
 const keywordPages = {
     'loire': 'http://127.0.0.1:5501/html/Loire.html', 'Loire': 'http://127.0.0.1:5501/html/Loire.html',
     'seine': 'http://127.0.0.1:5501/html/Seine.html', 'Seine': 'http://127.0.0.1:5501/html/Seine.html',
@@ -40,18 +47,20 @@ const keywordPages = {
     'croisiere': 'http://127.0.0.1:5501/html/accueil.html#fleuves', 'canal': 'http://127.0.0.1:5501/html/accueil.html#fleuves',    
 };
 
- document.querySelector('.search-input').addEventListener('keydown', function(event) {
-     if (event.key === 'Enter') {
-         const keyword = event.target.value.toLowerCase().trim();
+// Gestion de la recherche par mot-clé
+document.querySelector('.search-input').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+      const keyword = event.target.value.toLowerCase().trim();
 
-         // Vérifier si le mot-clé a une page correspondante
-         if (keyword in keywordPages) {
-             window.location.href = keywordPages[keyword];
-         } else {
-             alert('Mot-clé non reconnu. Essayez l\'un des mots-clés valides.');
-         }
-     }
- });
+      // Vérifier si le mot-clé a une page correspondante
+      if (keyword in keywordPages) {
+          window.location.href = keywordPages[keyword];
+      } else {
+          // Afficher un message d'erreur si le mot-clé est inconnu
+          alert('Mot-clé non reconnu. Essayez l\'un des mots-clés valides.');
+      }
+  }
+});
 //************************************/
 
 // Penichette-Houseboat img-growth

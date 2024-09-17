@@ -96,28 +96,28 @@ nav ul li a {
 /* Autres que page accueil */
  .search-container {
   display: none;
+  position: fixed;
   position: absolute;
-  top: -5.2rem;
-  width: 100vw;
-  height: 31.5%;
+  top: -.5rem;
+  width: 100vw;  
+  height: 32vh;
   z-index: 20;
   border: none;
 }
 .search-icon{
   display: block;
   position: absolute;
-  right: 5%;
-  top: 2.5rem;
+  right: 5%; 
   z-index: 20; 
-  scale: 1.8;
+  transform: scale(1.8);
   cursor: pointer;
 }
 .search-container.active {
-  display: flex;
-  align-items: center;
+  display: flex; 
 }
 .search-input {
   background-color: var(--secondary-color); 
+  color: #fff;
   width: calc(100% - 80px); /* Ajusté pour laisser de la place à la croix */
   height: 100%;
   padding: 0 20px;
@@ -135,15 +135,15 @@ nav ul li a {
   justify-content: center;
   position: absolute;
   right: 80px;
-  top: 45%;
-  transform: translateY(0);
+  top: 18%;
+  transform: translateY(-50%);
   cursor: pointer;
-  scale: 1.7;
-  color: #fff;
+  transform: scale(1.7);
+  color: #fff; 
   background: none;
   border: none;
   padding: 5px;
-  z-index: 100;
+  z-index: 150;
   margin: 0;
   /* transition: transform 0.2s ease-in-out; */
 }

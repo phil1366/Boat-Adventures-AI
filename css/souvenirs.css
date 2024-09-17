@@ -6,7 +6,14 @@ body{
 
 nav{
   position: fixed;
-  top: -1.5vh;   
+  top: -1.5vh;  
+  height: 115px; 
+}
+nav ul { 
+  margin-bottom: -1rem !important;  
+}
+.search-icon {  
+  top: 3.5rem;
 }
 
 /* Burger *****************/
@@ -17,7 +24,7 @@ nav{
 /* Styles pour la galerie photos */
 #galerie h2{
   text-align: center;
-  padding: 120px 0 20px;
+  padding: 150px 0 20px;
 }
 #galerie p{  
   text-align: center;
@@ -121,7 +128,6 @@ nav{
   font-size: 30px;
   cursor: pointer;
 }
-
 
 /* Newsletter *********************/
 .newsletter {
