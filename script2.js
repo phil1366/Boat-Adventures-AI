@@ -30,6 +30,21 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+const searchInput = document.querySelector('.search-input');
+
+// Quand l'utilisateur clique dans le champ de recherche
+searchInput.addEventListener('focus', function() {
+    searchInput.placeholder = '';  // Effacer le placeholder
+});
+
+// Quand l'utilisateur quitte le champ de recherche
+searchInput.addEventListener('blur', function() {
+    // Si le champ est vide, remettre le placeholder
+    if (searchInput.value.trim() === "") {
+        searchInput.placeholder = 'Mot à rechercher';  // Remettre le placeholder
+    }
+});
+
 const keywordPages = {
     'loire': 'http://127.0.0.1:5501/html/Loire.html', 'Loire': 'http://127.0.0.1:5501/html/Loire.html',
     'seine': 'http://127.0.0.1:5501/html/Seine.html', 'Seine': 'http://127.0.0.1:5501/html/Seine.html',

@@ -23,8 +23,7 @@ header {
   height: 20%;
 }
 .hero-content {
-  display: flex;
-  /* border: solid 5px red; */
+  display: flex;  
   margin-top: 2vh;
 }
 .hero-content .logo {
@@ -43,7 +42,7 @@ header {
   border: none;
 }
 .search-icon{
-  margin-top: 20vh;
+  margin-top: -1vh;
 }
 
 /* Main *********************/

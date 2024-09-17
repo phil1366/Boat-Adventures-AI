@@ -108,6 +108,7 @@ nav ul li a {
   display: block;
   position: absolute;
   right: 5%; 
+  top: 3rem;
   z-index: 20; 
   transform: scale(1.8);
   cursor: pointer;

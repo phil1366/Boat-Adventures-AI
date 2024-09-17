@@ -13,7 +13,7 @@ nav{
 /* Reservations *****************/
 #reservation-page {
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 8rem auto;
     padding: 2rem;
     background: linear-gradient(135deg, #cde1f3, #2f90eb);
     border-radius: 15px;
@@ -22,8 +22,7 @@ nav{
 #reservation-page h2 {
     color: var(--primary-color);
     text-align: center;
-    font-size: calc(1vw + 100%);
-    margin-top: 80px;
+    font-size: calc(.7vw + 100%);    
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
