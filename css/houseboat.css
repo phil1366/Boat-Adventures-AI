@@ -10,6 +10,12 @@ main {
     display: none;
 }
 
+nav{  
+    position: sticky;
+    -webkit-position: sticky;
+    top: 0; 
+}
+
 .container {
     width: 90%;
     max-width: 1200px;

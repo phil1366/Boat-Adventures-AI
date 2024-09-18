@@ -49,10 +49,6 @@
   font-size: 1.5rem;
 }
 
-h1 {
-  margin: 20px;
-}
-
 /* CTA ***********************/
 .cta-button {
     display: flex;
@@ -89,41 +85,48 @@ h1 {
 
 /* gallery ***********************/
 .hero-gallery {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 500%;
-    height: 100%;
-    animation: slideShow 50s infinite; /* Changed to 50s for 10 seconds per image */
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 100%;
+  animation: slideShow 50s infinite; /* Changed to 50s for 10 seconds per image */
 }
 .hero-gallery img {
-    width: 20%;
-    object-fit: cover;
+  width: 20%;
+  object-fit: cover;
+}
+
+#nav-ban{  
+  position: sticky;
+  -webkit-position: sticky;
+  top: 0; 
+  z-index: 1000
 }
 
 /* Animation gallery *************************/
 @keyframes slideShow {
-    0%,
-    20% {
-      transform: translateX(0);
-    }
-    25%,
-    45% {
-      transform: translateX(-20%);
-    }
-    50%,
-    70% {
-      transform: translateX(-40%);
-    }
-    75%,
-    95% {
-      transform: translateX(-60%);
-    }
-    100% {
-      transform: translateX(-80%);
-    }
+  0%,
+  20% {
+    transform: translateX(0);
   }
+  25%,
+  45% {
+    transform: translateX(-20%);
+  }
+  50%,
+  70% {
+    transform: translateX(-40%);
+  }
+  75%,
+  95% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
   
 /* Burger *****************/
 #menu-burger, .hamburger, .close-menu{  

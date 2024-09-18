@@ -6,6 +6,12 @@ body{
     display: none;
 }
 
+nav{  
+    position: sticky;
+    -webkit-position: sticky;
+    top: 0; 
+}
+
 main {
     padding: 2rem 0;
 }

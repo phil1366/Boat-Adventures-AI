@@ -47,6 +47,26 @@
         }, 10); // Lancer l'animation
     }
 
+// Menu nav-ban fixé en haut lors du scroll
+ // Récupère le menu
+ const nav = document.getElementById("nav-ban");
+
+ // Récupère la position initiale du menu
+ const sticky = nav.offsetTop;
+
+ // Fonction qui est appelée lors du défilement
+ function stickyMenu() {
+     if (window.pageYOffset >= sticky) {
+         nav.classList.add("sticky");
+     } else {
+         nav.classList.remove("sticky");
+     }
+ }
+
+ // Ajoute un écouteur d'événement pour détecter le défilement
+ window.onscroll = function() {
+     stickyMenu();
+ };
 
 
 

@@ -25,16 +25,39 @@ nav{
 }
 
 /* Styles pour la loupe et champ special fleuves */
+/* Styles pour le champ de recherche */
 .search-container {
-  top: 25vh !important;  
-  width: 100vw;
+  position: absolute;
+  top: 20%;  
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 100vw; 
   height: 27%;
   z-index: 50;
-  border: none;
+  border: none;  
 }
-.search-icon{
-  margin-top: 0;
+
+.search-input {
+  width: 100%; 
+  height: 6.5rem !important;
+  border-radius: 4px;
+  font-size: 1rem;
 }
+
+.search-icon {
+  position: absolute;
+  right: 7%;
+  top: 2.5rem;
+  cursor: pointer;
+}
+
+.close-search {
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
+  cursor: pointer;
+}
+
 
 /* Burger *****************/
 .burger, .close-menu{

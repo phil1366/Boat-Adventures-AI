@@ -41,8 +41,15 @@ header {
   z-index: 50;
   border: none;
 }
+.search-input{
+  position: relative;
+  top: 7.8vh !important;
+}
 .search-icon{
   margin-top: -1vh;
+}
+.close-search{ 
+  top: 12vh !important;
 }
 
 /* Main *********************/
