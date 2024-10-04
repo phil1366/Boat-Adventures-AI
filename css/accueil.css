@@ -1,28 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
 /* Banniere header *******************/
 .hero {
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column; */
   justify-content: center;
-  align-items: flex-start;
-  padding: 80px 50px;
+  /* align-items: flex-start; */
+  /* padding: 80px 50px; */
   width: 100%;
   height: auto;
-  position: relative;
+  /* position: relative; */
 }
 .hero-content-accueil {
   margin-top: -50px;
   z-index: 2;
-  width: 100%;
+  width: 100%; /* agit sur centrage de smartphone */
 }
-.hero-content-accueil .logo {  /* gouvernail */
+.hero-content-accueil .logo {
+  /* gouvernail */
   width: calc(8vw + 25px);
   position: relative;
   top: -1vh;
   right: 2vw;
 }
 .logo_titre {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 
 .h1-home {
@@ -36,13 +46,13 @@
 .hero-text {
   background-color: rgba(52, 152, 219, 0.8);
   color: white;
-  padding: 1.5rem;
-  border-radius: 5px;
-  font-size: calc(0.7vw + 15px); 
-  text-align: left;
-  margin-bottom: 1.5rem; 
-  line-height: 1.6;
-  border: 2px solid var(--light-blue);  
+  padding: 2rem;
+  border-radius: 8px;
+  font-size: calc(0.7vw + 15px);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  /* line-height: 1.6; */
+  border: 2px solid var(--light-blue);
 }
 
 #scroll-to-top i {
@@ -51,37 +61,36 @@
 
 /* CTA ***********************/
 .cta-button {
-    display: flex;
-    align-items: center;
-    color: var(--secondary-color);
-    padding: 0.2rem 1rem;
-    border: 3px solid var(--medium-blue);
-    border-radius: 15px;
-    font-size: calc(0.5vw + 15px);
-    font-weight: 600;
-    cursor: pointer;
-    z-index: 2;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    max-height: 8vh;
-  }
-  .cta-button:hover {
-    transform: scale(1.05);
-  }
-  .cta-button .icon-wrapper {
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
-    background-color: var(--medium-blue);
-    margin-left: 14px;
-    padding: 10px;
-    height: 5vh;
-  }
-  .cta-button svg {
-    width: 30px;
-    height: calc(0.7vw + 10px);
-    fill: white;    
-  }
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+  padding: 0.2rem 1rem;
+  border: 3px solid var(--medium-blue);
+  border-radius: 15px;
+  font-size: calc(0.5vw + 15px);
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 2rem;
+  /* max-height: 8vh; */
+}
+.cta-button:hover {
+  transform: scale(1.05);
+}
+.cta-button .icon-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--medium-blue);
+  margin-left: 14px;
+  padding: 10px;
+  height: 5vh;
+}
+.cta-button svg {
+  width: 30px;
+  height: calc(0.7vw + 10px);
+  fill: white;
+}
 
 /* gallery ***********************/
 .hero-gallery {
@@ -91,18 +100,11 @@
   left: 0;
   width: 500%;
   height: 100%;
-  animation: slideShow 50s infinite; /* Changed to 50s for 10 seconds per image */
+  animation: slideShow 50s infinite; /* Changement de 50s toutes les 10 secondes */
 }
 .hero-gallery img {
   width: 20%;
   object-fit: cover;
-}
-
-#nav-ban{  
-  position: sticky;
-  -webkit-position: sticky;
-  top: 0; 
-  z-index: 1000
 }
 
 /* Animation gallery *************************/
@@ -127,53 +129,55 @@
     transform: translateX(-80%);
   }
 }
-  
+
 /* Burger *****************/
-#menu-burger, .hamburger, .close-menu{  
-    display: none;
+#menu-burger,
+.hamburger,
+.close-menu {
+  display: none;
 }
 
 /* Nav */
-#nav-ban{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: rgba(52, 152, 219, 0.8);
-    width: 100%;
-    height: 10vh;
-    margin: 0 auto;     
-    z-index: 20;  
-    border: 2px solid var(--light-blue);
-    border-radius: 5px;
-  }
-#nav-ban li{
-    list-style-type: none;
-    padding-right: 2%;
+#nav-ban {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 10vh;
+  z-index: 30;
+  border: 5px solid var(--light-blue);
+  border-radius: 5px;
 }
-#nav-ban a{
-    font-size: calc(0.7vw + 14px);
-    color: white;
-    text-decoration: none;   
+#nav-ban li {
+  list-style-type: none;
+  padding-right: 2.8%;
+  white-space: nowrap;
+}
+#nav-ban a {
+  font-size: calc(0.7vw + 16px);
+  color: white;
+  text-decoration: none;
 }
 
-/* Loupe ***********************/
 /* Styles pour loupe et champ de recherche */
 .research-contain {
   display: none;
   position: relative;
-  top: -14vh;
-  width: 94vw;
-  margin: 0 auto !important; 
-  z-index: 50;
+  top: -7vh;
+  width: 100%;
+  margin: 0 auto !important;
+  z-index: 100;
   height: 0;
 }
-.research-icone{
+.research-icone {
   display: block;
-  position: absolute;
-  right: 7.5%;
-  margin-top: -8rem;
-  z-index: 20; 
-  scale: 1.8;
+  margin-left: 1.5rem;
+  /* z-index: 20;  */
+  transform: scale(1.8);
   cursor: pointer;
 }
 .research-contain.active {
@@ -181,248 +185,291 @@
   align-items: center;
 }
 .research-inp {
-  background-color: var(--secondary-color); 
-  height: 13vh !important;
+  /* Champ de recherche */
+  background-color: var(--secondary-color);
+  height: 10vh !important;
   padding: 0 20px;
   border: none;
-  font-size: 1rem;
-  margin-bottom: 0;
+  /* font-size: 3rem; */
+  margin-bottom: -0.7vh !important;
+  color: #fff;
+  border: solid red 5px;
 }
 .research-inp::placeholder {
-  color: #fff !important;
   opacity: 1;
   font-size: 1.3rem;
+  -webkit-text-fill-color: #fff; /* obligatoire pour chrome */
 }
 .fermeture {
   position: absolute;
   right: 80px;
   top: -1vh;
   cursor: pointer;
-  scale: 1.7;
+  transform: scale(1.7);
   color: #fff;
   background: none;
-  border: none;  
-  z-index: 100;
+  border: none;
+  /* z-index: 10; */
 }
 
 /* Main ******************/
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  #fleuves h2, #bateaux h2{
-    text-align: center;
-  }
-  /* .river-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  } */
-  
-  .river-list, .boat-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-  .river-card, .boat-card {
-    width: calc(33.33% - 1rem);
-    margin-bottom: 2rem;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;    
-  }
-  .river-card-content {
-    padding: 1rem;
-    text-align: center;
-  }
-  .river-card:hover, .boat-card:hover {
-    scale: 1.01;
-  }
-  .river-card img, .boat-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  .river-card h2, .boat-card h2 {
-    padding: 1rem;
-    margin: 0;
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-  }
-  .river-card, .boat-card {
-    width: calc(50% - 1rem);
-  }
-  .river-card p {
-    margin-bottom: 1rem;
-  }
-  .boat-card p{
-    text-align: center;
-    font-size: 1.2rem;
-    width: 85%;
-    margin: 0 auto;
-  }
-  .boat-features {
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
-    margin: 1rem auto;
-    font-size: 1.1rem;
-    color: var(--secondary-color);
-  }
-  .boat-card .btn-plus{
-    margin-top: 2rem;
-    margin-bottom: 2.7%;
-  }
-  .btn-plus {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 15vw;
-    background: var(--medium-blue);  
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    white-space: nowrap;
-  }
-  .btn-plus:hover {
-    color: white;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-/* Bateaux Style pour image plein écran */
+#fleuves h2,
+#bateaux h2 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+/* .river-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+} */
+
+.river-list,
+.boat-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.river-card,
+.boat-card {
+  /* width: calc(33.33% - 1rem); */
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.river-card-content {
+  padding: 1rem;
+  text-align: center;
+}
+.river-card:hover,
+.boat-card:hover {
+  transform: scale(1.01);
+}
+.river-card img,
+.boat-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.river-card h2,
+.boat-card h2 {
+  /* padding: 1rem; */
+  /* margin: 0; */
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem;
+}
+.river-card,
+.boat-card {
+  width: calc(50% - 1rem);
+}
+.river-card p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+.boat-card p {
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.boat-features {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+.boat-card .btn-plus {
+  margin-top: 2rem;
+  margin-bottom: 2.7%;
+}
+.btn-plus {
+  /* En savoir plus */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 15vw;
+  background: var(--medium-blue);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+.btn-plus:hover {
+  color: white;
+}
+
+/* Style pour full screen */
 .fullscreen-image-container {
-  display: none; /* Cacher par défaut */
+  display: none;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 100;
 }
 .fullscreen-image-container img {
   max-width: 90%;
   max-height: 90%;
-  min-width: 600px; 
+  min-width: 600px;
   min-height: 600px;
   object-fit: contain;
 }
 .fullscreen-image-container.active {
   display: flex; /* Afficher lorsque actif */
 }
+
 .fullscreen-image-container .close-btn {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 2rem;
+  top: 50px;
+  right: 50px;
+  font-size: 3rem;
   color: white;
   cursor: pointer;
 }
-  
-/*********************/
-@media (min-width: 768px) and (max-width: 992px){
-#nav-ban{
-  padding-right: 8.5vw;
-  white-space: nowrap;   
-}
-.fermeture{
-  margin-top: -.5rem;
-}
-}
-  
+
 /**********************/
-  @media (min-width: 375px) and (max-width: 767px){
+/**********************/
+@media (min-width: 768px) and (max-width: 992px) {
+  .logo_titre {
+    position: relative;
+    left: 14vw;
+  }
+  .cta-button {
+    position: relative;
+    left: 32%;
+  }
+  #nav-ban {
+    padding: 0;
+    height: 17vh;
+  }
+  #nav-ban li {
+    position: relative;
+    top: -1.5rem;
+    left: 0.5rem;
+  }
+  #nav-ban li a {
+    font-size: 1.3rem;
+  }
+  .research-contain {
+    top: -11vh;
+  }
+  .research-icone {
+    position: absolute;
+    top: 9vh;
+  }
+  .research-inp {
+    height: 16.5vh !important;
+  }
+  .river-card p {
+    font-size: 1.1rem;
+  }
+  .btn-plus {
+    width: 21vw;
+  }
+}
+
+/**********************/
+/**********************/
+@media (min-width: 375px) and (max-width: 767px) {
   .hero-gallery {
-    height: 110%;
+    height: 105%;
+    /* border: solid red 5px; */
   }
   .logo_titre {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     justify-content: center;
   }
-  .logo_titre .logo {   /* gouvernail */
-    width: 6rem;
-    margin-left: 2%;
-    width: calc(5vw + 3rem);
+  .logo_titre .logo {
+    /* gouvernail */
+    margin-top: 1rem;
+    /* margin-left: 2%; */
+    width: calc(5vw + 3.5rem);
   }
-  .logo_titre .logo, .h1-home{ 
-    right: 1rem;
-  }
+  
   .h1-home {
     font-size: calc(4.5vw + 12px);
     white-space: nowrap;
-    margin-top: .5rem;
-    margin-left: 0;
+    margin-top: 0.5rem;
+    /* margin-left: 0; */
+    color: #fff;
   }
-  .hero-text{
-    text-align: center;
-  }
-  .icon-wrapper{
+  .icon-wrapper {  /* Btn */
+    /* border: solid red 5px;    */
     height: 2rem !important;
     width: 2rem !important;
   }
   .icon-wrapper svg {
-    scale: 1.5;    
+    transform: scale(1.5);
   }
-  #nav-ban{
+  #nav-ban {
     display: none;
   }
-  .cta-button{
+  .cta-button {
     margin: 0 auto;
+    min-width: 35vw;
+    padding: 15px;
   }
-  
+
   /* hamburger ******************/
-  .hamburger{
-    display: block;  
+  .hamburger {
+    display: block;
   }
-  .hamburger i{
+  .hamburger i {
     display: flex;
     justify-content: center;
     transform: scale(2.5);
     color: white;
-    margin-top: -4vh;
-    margin-bottom: 5rem;  
+    margin-top: -8vh;
+    margin-bottom: 5rem;
   }
   #menu-burger {
     display: block;
-    line-height: 2.5;
-    z-index: 20;
+    z-index: 10;
     backdrop-filter: blur(12px);
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    background-color: rgba(52, 152, 219, .8);
-    border-radius: none;
-    transform: translateX(-100%);
+    background-color: rgba(52, 152, 219, 0.8);
+    border-radius: 0;
+    transform: translateX(-110%);
     transition: transform 0.3s ease;
     position: absolute;
-    min-height: 56vh;
-    width: 100vw;
     top: 0;
+    min-height: 36rem !important;
+    width: 100vw;
   }
   .menu-open #menu-burger {
-    transform: translateX(0);
-    height: 30.3rem;  
+    transform: translateX(-2rem);
+    padding: 0;
   }
-  #menu-burger li{
-    transform: translateX(-3%);
-    list-style-type: none; 
-    margin-top: 5vh; 
+  #menu-burger li {
+    list-style-type: none;
+    margin-top: 5.5vh;
   }
-  #menu-burger li a{  
+  #menu-burger li a {
     display: flex;
     justify-content: center;
-    text-decoration: none; 
-    color: #fff; 
+    text-decoration: none;
+    color: #fff;
     font-size: 1.5rem;
-    line-height: .9;
+    line-height: 0.9;
   }
 
   /* Styling de la croix avec animation */
@@ -436,56 +483,80 @@ main {
     cursor: pointer;
     z-index: 20;
     opacity: 0;
-    transform: scale(0.8);
+    /* transform: scale(0.8); */
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
+
   /* Affichage de la croix avec transition */
   .menu-active .close-menu {
     opacity: 1;
-    transform: scale(1);
+    /* transform: scale(1); */
   }
 
   /* Loupe ***************/
-  .research-icone{
-    display: none;    
-    margin-top: -6rem;
-    scale: 1.8;
-    cursor: pointer;
-    margin-right: 39vw;
+  .search-container {
+    display: flex;
+    align-items: center;
+    display: none; /* placé volontairement ici en dessous */
+    height: 28vh;  
+    position: absolute;
+    top: 23rem;
   }
-  .menu-open .research-icone {
-    /* border: solid red 5px; */
+  .search-container.active{
+    right: 0;
+  }
+  .loupe-menu-burger {    
+    position: absolute;
+    top: 56.5vh !important;
+    right: 47.5%;
+  }
+  .menu-open .loupe-menu-burger {
     display: block;
-    position: absolute;    
-    top: 33rem;   
-    scale: 1.8;
+    position: absolute;
+    top: 33rem;
+    transform: scale(1.8);
     cursor: pointer;
   }
-  .research-inp{
-    margin-top: 6%;
+  .recherche-inp {  /* champ de rcherche */     
+    border-radius: 8px !important;
+    font-size: 1.3rem !important;
+    width: 85vw !important;
+    padding: 0 20px !important;
+    position: relative;    
+    left: 8%;   
+   
   }
-  .fermeture{
-    /* margin-top: 1vh; */
-    position: absolute !important;
-    top: 10%!important;
+  .close-search {       
+    position: absolute;  
+    bottom: 19%;
+    right: 10%;
+    color: #333 !important;
+    transform: scale(1.6) !important;      
   }
-  
+ 
   /* Main ******************/
-  .river-card, .boat-card{  
-    width: 100%; 
+  .river-card, .boat-card {
+    width: 100%;
   }
-  .river-card p{
+  #fleuves h2,
+  #bateaux h2 {
+    margin-top: 0;
+  }
+  .river-card p {
     text-align: center;
     margin-bottom: 5%;
-
   }
-  .btn-plus{
-    width: 30vw;
+  .boat-features {
+    flex-direction: column;
   }
-  
+  .boat-features span {
+    text-align: center;
+  }
+  .btn-plus {
+    width: 40vw;
+  }
   footer p {
-    font-size: calc(1.3vw + 10px) ;
+    font-size: calc(1.3vw + 10px);
     white-space: pre-wrap;
   }
-  }
+}

@@ -42,10 +42,9 @@
                 <h1 class="h1-home">Boating Adventures</h1>
             </div>
             <p class="hero-text">Découvrez la beauté des fleuves européens à bord de nos bateaux confortables. Une
-                aventure
-                inoubliable vous attend ! Naviguez à travers des paysages pittoresques, explorez des villes historiques
-                et vivez
-                des moments uniques en famille ou entre amis.</p>
+                aventure inoubliable vous attend ! <br> Naviguez à travers des paysages pittoresques, explorez des
+                villes historiques
+                et vivez des moments uniques en famille ou entre amis.</p>
         </div>
 
         <button class="cta-button" onclick="window.location.href='reservations.html'">
@@ -57,57 +56,70 @@
                 </svg>
             </span>
         </button>
+    </header>
 
+    <main>
         <!-- Nav -->
         <ul id="nav-ban">
             <li><a href="../html/accueil.html">Accueil</a></li>
-            <li><a href="../html/accueil.html#fleuves">Nos Fleuves</a></li>
-            <li><a href="../html/accueil.html#bateaux">Nos Bateaux</a></li>
+            <li><a href="../html/accueil.html#fleuves">Nos fleuves</a></li>
+            <li><a href="../html/accueil.html#bateaux">Nos bateaux</a></li>
             <li><a href="../html/souvenirs.html">Souvenirs</a></li>
             <li><a href="../html/reservations.html">Réservations</a></li>
             <li><a href="../html/contact.html">Contact</a></li>
+            <div class="research-icone" aria-label="Rechercher">🔍</div>
         </ul>
-    </header>
 
-    <!-- Menu burger  placé différement des autres pages -->
-    <ul id="menu-burger">
-        <li><a href="../html/accueil.html">Accueil</a></li>
-        <li><a href="../html/accueil.html#fleuves">Nos Fleuves</a></li>
-        <li><a href="../html/accueil.html#bateaux">Nos Bateaux</a></li>
-        <li><a href="../html/souvenirs.html">Souvenirs</a></li>
-        <li><a href="../html/reservations.html">Réservations</a></li>
-        <li><a href="../html/contact.html">Contact</a></li>
-    </ul>
-    <div class="close-menu">
-        <i class="fa-solid fa-times"></i>
-    </div>
+        <!-- loupe -->
+        <div class="research-contain">
+            <input type="text" class="research-inp" placeholder="Rechercher...">
+            <button class="fermeture" aria-label="Fermer la recherche">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
 
-    <div class="hamburger">
-        <i class="fa-solid fa-bars"></i>
-    </div>
+        <!-- Menu burger  placé différement des autres pages -->
+        <ul id="menu-burger">
+            <li><a href="../html/accueil.html">Accueil</a></li>
+            <li><a href="../html/accueil.html#fleuves">Nos fleuves</a></li>
+            <li><a href="../html/accueil.html#bateaux">Nos bateaux</a></li>
+            <li><a href="../html/souvenirs.html">Souvenirs</a></li>
+            <li><a href="../html/reservations.html">Réservations</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
+            <div class="loupe-menu-burger" aria-label="Rechercher">🔍</div>
+        </ul>
 
-    <!-- loupe -->
-    <div class="research-icone" aria-label="Rechercher">🔍</div>
-    <div class="research-contain">
-        <input type="text" class="research-inp" placeholder="Rechercher...">
-        <button class="fermeture" aria-label="Fermer la recherche">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-    </div>
+         <!-- loupe burger-->
+         <div class="search-container">
+            <input type="text" class="recherche-inp" placeholder="Rechercher...">
+            <button class="close-search" aria-label="Fermer la recherche">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
 
+        <div class="close-menu">
+            <i class="fa-solid fa-times"></i>
+        </div>
 
-    <main>
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <section id="fleuves">
             <h2>Nos Fleuves</h2>
 
             <div class="river-list">
                 <div class="river-card">
                     <img src="../src/images/Nos_fleuves/la_Loire.png" alt="La Loire, le plus long fleuve de France"
-                        loading="lazy">
+                        loading="lazy" onclick="openFullscreen(this)">
                     <div class="river-card-content">
                         <h2>La Loire</h2>
                         <p>Naviguez au cœur de la France sur la Loire. Découvrez les châteaux de la Renaissance et les
@@ -119,7 +131,7 @@
 
                 <div class="river-card">
                     <img src="../src/images/Nos_fleuves/La_Seine.png" alt="La Seine, fleuve traversant Paris, France"
-                        loading="lazy">
+                        loading="lazy" onclick="openFullscreen(this)">
                     <div class="river-card-content">
                         <h2>La Seine</h2>
                         <p>Découvrez la magie de Paris et de la Normandie en naviguant sur la Seine. Des paysages
@@ -131,7 +143,8 @@
 
                 <div class="river-card">
                     <img src="../src/images/Nos_fleuves/Le_Rhin.png"
-                        alt="Le Rhin, fleuve traversant l'Allemagne et les Pays-Bas" loading="lazy">
+                        alt="Le Rhin, fleuve traversant l'Allemagne et les Pays-Bas" loading="lazy"
+                        onclick="openFullscreen(this)">
                     <div class="river-card-content">
                         <h2>Le Rhin</h2>
                         <p>Explorez l'histoire et la culture de l'Europe centrale en naviguant sur le Rhin.
@@ -142,7 +155,8 @@
 
                 <div class="river-card">
                     <img src="../src/images/Nos_fleuves/Le_Danube.png"
-                        alt="Le Danube, fleuve traversant l'Europe centrale et orientale" loading="lazy">
+                        alt="Le Danube, fleuve traversant l'Europe centrale et orientale" loading="lazy"
+                        onclick="openFullscreen(this)">
                     <div class="river-card-content">
                         <h2>Le Danube</h2>
                         <p>Traversez l'Europe de l'Est sur le majestueux Danube. Des capitales impériales aux paysages
@@ -153,7 +167,8 @@
                 </div>
 
                 <div class="river-card">
-                    <img src="../src/images/Nos_fleuves/Amsterdam.png" alt="Amsterdam et ses canaux" loading="lazy">
+                    <img src="../src/images/Nos_fleuves/Amsterdam.png" alt="Amsterdam et ses canaux" loading="lazy"
+                        onclick="openFullscreen(this)">
                     <div class="river-card-content">
                         <h2>Amsterdam</h2>
                         <p>Explorez l'histoire et la culture des Pays-bas en naviguant sur leurs canaux. Des tulipes aux
@@ -164,7 +179,8 @@
                 </div>
 
                 <div class="river-card">
-                    <img src="../src/images/Nos_fleuves/Venise.png" alt="Venise" loading="lazy">
+                    <img src="../src/images/Nos_fleuves/Venise.png" alt="Venise" loading="lazy"
+                        onclick="openFullscreen(this)">
                     <div class="river-card-content">
                         <h2>Venise</h2>
                         <p>Visitez Venise la magnifique en naviguant sur leurs canaux. Des maisons vénitiennes aux
@@ -233,7 +249,8 @@
                 </div>
                 <div class="boat-card">
                     <img src="../src/images/Nos_bateaux/narrowboat.jpg"
-                        alt="Narrowboat, bateau étroit pour 2 à 4 personnes" loading="lazy" onclick="openFullscreen(this)">
+                        alt="Narrowboat, bateau étroit pour 2 à 4 personnes" loading="lazy"
+                        onclick="openFullscreen(this)">
                     <h2>Narrowboat</h2>
                     <p>Bateau étroit parfait pour naviguer sur les canaux plus resserrés.</p>
                     <div class="boat-features">
@@ -291,7 +308,7 @@
 
     <script src="/scriptaccueil.js"></script>
 
-    <script> /// LOUPE *****************************/
+    <script> // LOUPES placées ici car fichier js non fonctionnel pour les 2 loupes 
         // Ouvrir/fermer la barre de recherche
         document.querySelector('.research-icone').addEventListener('click', () => {
             document.querySelector('.research-contain').classList.toggle('active');
@@ -299,6 +316,13 @@
 
         document.querySelector('.fermeture').addEventListener('click', function () {
             document.querySelector('.research-contain').classList.remove('active');
+        });
+
+        // Fermer la barre de recherche avec la touche Escape
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                document.querySelector('.research-contain').classList.remove('active');
+            }
         });
 
         const keywordPages = {
@@ -329,7 +353,34 @@
                     alert('Mot-clé non reconnu. Essayez l\'un des mots-clés valides.');
                 }
             }
+        });  
+
+        // loupe menu burger
+        document.querySelector('.loupe-menu-burger').addEventListener('click', () => {
+            document.querySelector('.search-container').classList.toggle('active');
         });
+
+        document.querySelector('.close-search').addEventListener('click', function () {
+            document.querySelector('.search-container').classList.remove('active');
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                document.querySelector('.search-container').classList.remove('active');
+            }
+        });
+
+        document.querySelector('.recherche-inp').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                const keyword = event.target.value.trim().toLowerCase();
+
+                if (keyword in keywordPages) {
+                    window.location.href = keywordPages[keyword];
+                } else {
+                    alert('Mot-clé non reconnu. Essayez l\'un des mots-clés valides.');
+                }
+            }
+        });  
     </script>
 
 </body>

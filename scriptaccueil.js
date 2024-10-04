@@ -27,46 +27,28 @@
 
 // Bateaux img-growth ***********************
     function openFullscreen(imgElement) {
+    // Création dynamique du conteneur plein écran
         const fullscreenContainer = document.createElement('div');
         fullscreenContainer.classList.add('fullscreen-image-container');
-        
+    // Création de l'image pleine écran    
         const fullscreenImg = document.createElement('img');
         fullscreenImg.src = imgElement.src;
         
+     // Création du bouton de fermeture
         const closeBtn = document.createElement('span');
         closeBtn.innerHTML = '&times;';
         closeBtn.classList.add('close-btn');
-        closeBtn.onclick = () => fullscreenContainer.remove();
+        closeBtn.onclick = () => fullscreenContainer.remove();  // Ferme le conteneur 
         
+    // Ajout de l'image et du bouton de fermeture au conteneur
         fullscreenContainer.appendChild(fullscreenImg);
         fullscreenContainer.appendChild(closeBtn);
+    // Ajout du conteneur au body du document
         document.body.appendChild(fullscreenContainer);
 
         setTimeout(() => {
             fullscreenContainer.classList.add('active');
         }, 10); // Lancer l'animation
     }
-
-// Menu nav-ban fixé en haut lors du scroll
- // Récupère le menu
- const nav = document.getElementById("nav-ban");
-
- // Récupère la position initiale du menu
- const sticky = nav.offsetTop;
-
- // Fonction qui est appelée lors du défilement
- function stickyMenu() {
-     if (window.pageYOffset >= sticky) {
-         nav.classList.add("sticky");
-     } else {
-         nav.classList.remove("sticky");
-     }
- }
-
- // Ajoute un écouteur d'événement pour détecter le défilement
- window.onscroll = function() {
-     stickyMenu();
- };
-
 
 
