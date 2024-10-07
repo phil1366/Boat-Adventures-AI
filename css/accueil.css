@@ -10,31 +10,22 @@ body {
 /* Banniere header *******************/
 .hero {
   display: flex;
-  /*flex-direction: column; */
   justify-content: center;
-  /* align-items: flex-start; */
-  /* padding: 80px 50px; */
   width: 100%;
   height: auto;
-  /* position: relative; */
 }
 .hero-content-accueil {
   margin-top: -50px;
   z-index: 2;
   width: 100%; /* agit sur centrage de smartphone */
 }
-.hero-content-accueil .logo {
-  /* gouvernail */
+.hero-content-accueil .logo {  /* gouvernail */
   width: calc(8vw + 25px);
   position: relative;
   top: -1vh;
   right: 2vw;
+  
 }
-.logo_titre {
-  /* display: flex;
-  align-items: center; */
-}
-
 .h1-home {
   font-size: calc(4vw + 10px);
   -webkit-text-stroke: 2px var(--light-blue);
@@ -51,7 +42,6 @@ body {
   font-size: calc(0.7vw + 15px);
   text-align: center;
   margin-bottom: 1.5rem;
-  /* line-height: 1.6; */
   border: 2px solid var(--light-blue);
 }
 
@@ -63,7 +53,7 @@ body {
 .cta-button {
   display: flex;
   align-items: center;
-  color: var(--secondary-color);
+  color: #333;
   padding: 0.2rem 1rem;
   border: 3px solid var(--medium-blue);
   border-radius: 15px;
@@ -72,7 +62,6 @@ body {
   cursor: pointer;
   z-index: 2;
   margin-top: 2rem;
-  /* max-height: 8vh; */
 }
 .cta-button:hover {
   transform: scale(1.05);
@@ -83,7 +72,7 @@ body {
   border-radius: 50%;
   background-color: var(--medium-blue);
   margin-left: 14px;
-  padding: 10px;
+  padding: 12px;
   height: 5vh;
 }
 .cta-button svg {
@@ -100,7 +89,7 @@ body {
   left: 0;
   width: 500%;
   height: 100%;
-  animation: slideShow 50s infinite; /* Changement de 50s toutes les 10 secondes */
+  animation: slideShow 50s infinite; /* nouvel image (50s) toutes les 10 secondes */
 }
 .hero-gallery img {
   width: 20%;
@@ -131,9 +120,7 @@ body {
 }
 
 /* Burger *****************/
-#menu-burger,
-.hamburger,
-.close-menu {
+#menu-burger, .hamburger, .close-menu {
   display: none;
 }
 
@@ -176,7 +163,6 @@ body {
 .research-icone {
   display: block;
   margin-left: 1.5rem;
-  /* z-index: 20;  */
   transform: scale(1.8);
   cursor: pointer;
 }
@@ -184,13 +170,11 @@ body {
   display: flex;
   align-items: center;
 }
-.research-inp {
-  /* Champ de recherche */
+.research-inp {    /* Champ de recherche */
   background-color: var(--secondary-color);
   height: 10vh !important;
   padding: 0 20px;
   border: none;
-  /* font-size: 3rem; */
   margin-bottom: -0.7vh !important;
   color: #fff;
   border: solid red 5px;
@@ -209,7 +193,6 @@ body {
   color: #fff;
   background: none;
   border: none;
-  /* z-index: 10; */
 }
 
 /* Main ******************/
@@ -238,12 +221,9 @@ main {
   justify-content: space-between;
   margin-top: 2rem;
 }
-.river-card,
-.boat-card {
-  /* width: calc(33.33% - 1rem); */
+.river-card, .boat-card { 
   margin-bottom: 2rem;
   border-radius: 10px;
-  /* overflow: hidden; */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -251,20 +231,15 @@ main {
   padding: 1rem;
   text-align: center;
 }
-.river-card:hover,
-.boat-card:hover {
+.river-card:hover, .boat-card:hover {
   transform: scale(1.01);
 }
-.river-card img,
-.boat-card img {
+.river-card img, .boat-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
-.river-card h2,
-.boat-card h2 {
-  /* padding: 1rem; */
-  /* margin: 0; */
+.river-card h2, .boat-card h2 {
   text-align: center;
   color: #333;
   font-size: 1.5rem;
@@ -295,8 +270,7 @@ main {
   margin-top: 2rem;
   margin-bottom: 2.7%;
 }
-.btn-plus {
-  /* En savoir plus */
+.btn-plus {   /* En savoir plus */
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -391,30 +365,22 @@ main {
 /**********************/
 @media (min-width: 375px) and (max-width: 767px) {
   .hero-gallery {
-    height: 105%;
-    /* border: solid red 5px; */
+    height: 105%;  
   }
-  .logo_titre {
-    /* display: flex;
-    align-items: center; */
+  .logo_titre {  
     justify-content: center;
   }
-  .logo_titre .logo {
-    /* gouvernail */
-    margin-top: 1rem;
-    /* margin-left: 2%; */
+  .logo_titre .logo {   /* gouvernail */
+    margin-top: 1rem;   
     width: calc(5vw + 3.5rem);
   }
-  
   .h1-home {
     font-size: calc(4.5vw + 12px);
     white-space: nowrap;
     margin-top: 0.5rem;
-    /* margin-left: 0; */
     color: #fff;
   }
-  .icon-wrapper {  /* Btn */
-    /* border: solid red 5px;    */
+  .icon-wrapper {  /* Btn */  
     height: 2rem !important;
     width: 2rem !important;
   }
@@ -483,14 +449,12 @@ main {
     cursor: pointer;
     z-index: 20;
     opacity: 0;
-    /* transform: scale(0.8); */
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   /* Affichage de la croix avec transition */
   .menu-active .close-menu {
     opacity: 1;
-    /* transform: scale(1); */
   }
 
   /* Loupe ***************/
@@ -538,8 +502,7 @@ main {
   .river-card, .boat-card {
     width: 100%;
   }
-  #fleuves h2,
-  #bateaux h2 {
+  #fleuves h2, #bateaux h2 {
     margin-top: 0;
   }
   .river-card p {
@@ -548,6 +511,9 @@ main {
   }
   .boat-features {
     flex-direction: column;
+  }
+  .boat-card h2{
+    margin-top: 2rem !important;
   }
   .boat-features span {
     text-align: center;

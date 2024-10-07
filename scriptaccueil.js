@@ -2,7 +2,6 @@
 
  // MENU BURGER ******************/        
    const hamburger = document.querySelector('.hamburger');
-   const menuBurger = document.getElementById('menu-burger');
    const closeMenu = document.querySelector('.close-menu');
 
    hamburger.addEventListener('click', () => {
@@ -10,7 +9,7 @@
    });
 
    closeMenu.addEventListener('click', () => {
-       document.body.classList.remove('menu-open');  // Supprime la classe 'menu-open' pour fermer le menu
+       document.body.classList.remove('menu-open');  // classe 'menu-open' pour fermer le menu
    });
 
 // SLIDE PHOTOS *******************/        
@@ -18,7 +17,8 @@
    const photoGallery = document.getElementById('photo-gallery');
 
    galleryLink.addEventListener('click', (e) => {
-       e.preventDefault();  //Empêche le comportement par défaut du lien (ne pas naviguer vers autre page)
+       //Empêche le comportement par défaut du lien (ne pas naviguer vers autre page)
+       e.preventDefault(); 
        // Sélectionne tous les divs enfants directs de `contentArea` et les cache
        contentArea.querySelectorAll('> div').forEach(div => div.classList.add('hidden'));
        // Affiche `photoGallery` en supprimant la classe `hidden`
