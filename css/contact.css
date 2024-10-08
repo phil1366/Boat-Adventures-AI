@@ -32,6 +32,7 @@ section{
 .h1-contact{
   text-align: center;
   padding: 1.8rem;
+  font-size: calc(1.1vw + 1.2rem);
 }
 .contact-title p{
   text-align: center;
@@ -56,12 +57,14 @@ section{
 .contact-form h2, .contact-form h3, #contact-info h2, #contact-info h3{
   white-space: nowrap;
 }
-#contact-info p {
+#contact-info p, #contact-info span {
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 #contact-info a{
-  font-size: 1.1rem;  
+  font-size: 1.1rem; 
+  color: #fff;  
+  text-decoration: none; 
 }
   
 form {
@@ -73,41 +76,28 @@ label {
   font-weight: bold;
 }
 input, textarea {
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin-top: 0.5rem;  
 }
 
 .socio-media{
-  scale: 1.2;
-  margin-left: 8%;  
+  scale: 1.3;
+  margin-left: 13%; 
 }
-
-button {
-  margin-top: 1rem;
-  padding: .7rem 1rem;
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: calc(.5vw + .9rem) ;
-  transition: background-color 0.3s ease;
-}
-button:hover {
-  background: transparent;
-  border: solid 3px var(--secondary-color);
+.socio-media svg{
+  fill: var(--secondary-color); 
 }
 
 input[type="submit"]{
   background-color: var(--secondary-color);
   color: white;
   border: none; 
-  font-size: 1.1rem;
+  outline: none;
+  font-size: 1.2rem;
   border-radius: 30px;
   width: 100%;
   margin: 5% 0 -40vh;
+  padding: .7rem;
+  letter-spacing: 2px;
 }
 
 /***************************/
@@ -123,25 +113,13 @@ nav ul li {
 nav ul li a{
   font-size: calc(.6vw + 15px) !important;
 }
-.search-container {  
-  position: absolute;
-  height: 32% !important;
-}
-.search-icon{  /* Loupe */
-  top: 2.9rem !important;
-  right: 3.5% !important;
-}
-.close-search{  
-  top: 45%!important;
-}
 .contact-title p{
-  font-size: calc(2.3vw + 2px) !important;
-  width: 80%;
+  font-size: calc(2.2vw + 2px) !important;
+  width: 90%;
 }
 #contact-container h2, #contact-info h2{
   font-size: calc(3.5vw - 5px) !important;
 }
-
 }
 
 /***************************/
@@ -153,19 +131,18 @@ nav ul li a{
   }
  nav{
    position: inherit;
-  }   
+  }  
+  .close-search{
+    top: 18% !important;
+    right: 3rem !important;
+  } 
   #contact-container{
     height: 130vh;
   }
   .contact-title{
     margin-top: -7rem;
   }
-  .contact-title p {
-    width: 81%;
-    font-size: calc(1.7rem - 10px) ;
-  }
   .h1-contact{
-    text-align: center;
     padding-bottom: 2%;
   }
   .contact-title p, .contact-form h2{
@@ -184,14 +161,18 @@ nav ul li a{
   }
   #contact-info{
     text-align: center;
-    margin-top: 65vh;   
+    margin-top: 64vh;  
     color: #333;
   }
   #contact-info h2{
     margin-bottom: 1rem;
   }
   #contact-info a{
-    font-size: inherit;
+    margin-left: -.8rem; 
+    color: inherit;
+  }
+  #contact-info p{
+    white-space: nowrap;
   }
   #contact-info span{
     font-size: 1.05rem;
@@ -199,11 +180,16 @@ nav ul li a{
   }
   .socio-media{
     margin-left: 0;
+    letter-spacing: 15px;
   }
   .newsletter{
     margin-top: 55rem !important;
   }
+  .newsletter-form h2 {
+    font-size: calc(1.1vw + 1.1rem) !important;    
+  }
   footer p{
-    font-size: calc(1.5vw + .5rem) !important;     
+    font-size: calc(1.5vw + .7rem) !important;     
+    white-space: pre-wrap !important;
   }
 }

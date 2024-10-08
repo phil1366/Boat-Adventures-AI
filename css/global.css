@@ -108,7 +108,7 @@ nav ul li a {
   display: block;
   position: absolute;
   right: 5%; 
-  top: 3rem;
+  top: 2.5rem;
   z-index: 20; 
   transform: scale(1.8);
   cursor: pointer;
@@ -136,7 +136,7 @@ nav ul li a {
   justify-content: center;
   position: absolute;
   right: 80px;
-  top: 18%;
+  top: 20%;
   transform: translateY(-50%);
   cursor: pointer;
   transform: scale(1.7);
@@ -189,6 +189,7 @@ nav ul li a {
 label {
   display: block; 
   font-weight: bold;
+  font-size: 1.2rem;
 }
 input[type="text"], input[type="email"], select {
   width: 100%;
