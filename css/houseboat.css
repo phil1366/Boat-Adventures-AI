@@ -11,24 +11,24 @@ main {
 }
 
 nav{  
-    position: sticky;
-    -webkit-position: sticky;
-    top: 0; 
+    position: fixed;  
+    top: 0;  
+}
+.close-search svg{
+    margin-top: -.4rem;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
-.houseboat-details {
-    background-color: white;
+.houseboat-details {   
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
 }
 .houseboat-details h2{
     font-weight: 600;
@@ -52,7 +52,7 @@ nav{
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 .feature-card {
@@ -62,14 +62,12 @@ nav{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .feature-card h4 {
-    color: var(--medium-blue);
-    margin-top: 0;
+    color: var(--medium-blue);    
     text-align: center;
 }
 .feature-card li{
-    /* border: solid red 5px; */
-    margin-left: -2rem;
-    width: 30vw;
+    margin-left: -2.1rem;
+    width: 14.8rem;
 }
 
 /* CTA */
@@ -107,25 +105,26 @@ nav{
 .img-houseboat img:hover {
     transform: scale(1.05);
 }
+
 /* Style Houseboat pour l'image en plein écran */
 .fullscreen-image-container {
-    display: none; /* Cacher par défaut */
+    display: none; 
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 50;
 }
 .fullscreen-image-container img {
-    object-fit: contain;
+    object-fit: contain;    
     max-width: 90%;
     max-height: 90%;
-    min-width: 800px;
-    min-height: 600px;
+    min-width: 50vw; 
+    min-height: 50vh;
     border-radius: 8px;
 }
 .fullscreen-image-container.active {
@@ -134,15 +133,14 @@ nav{
 .fullscreen-image-container .close-btn {
     position: absolute;
     top: 10px;
-    right: 20px;
-    font-size: 2rem;
+    right: 5vw;
+    font-size: 3rem;
     color: white;
     cursor: pointer;
 }
 
 /* Destinations ****************/
 .destinations {
-    background-color: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -164,102 +162,47 @@ nav{
     font-size: 1.2rem;
 }
 
-/* Newsletter *********************/
-.newsletter {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 0;
-    flex-grow: 1;
-  }
-  .newsletter-form {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .newsletter-form h2 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 1.5rem; 
-  }
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-  .form-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -0.5rem;
-  }
-  .form-column {
-    flex: 1 1 200px;
-    margin: 0 0.5rem 0;
-  }
-  label {
-    display: block; 
-    font-weight: bold;
-  }
-  input[type="text"],
-  input[type="email"],
-  select {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    height: 45%;
-  }
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 24px; 
-    padding: 5px 10px !important;
-  }
-  select::-ms-expand {
-    display: none;
-  }
-  button[type="submit"] {   /* meme btn dans page resa */
-    letter-spacing: 2px !important;
-    padding: 8px !important; 
-    transition: background-color 0.3s ease;
-  }
-  button[type="submit"]:hover {
-    background-color: #c0392b;
-  }
-
 /***************************/
-@media (min-width: 768px) and (max-width: 992px){ 
+/***************************/
+@media (min-width: 768px) and (max-width: 992px){
+.destinations p{
+    font-size: 1.2rem !important;
+    width: 80%;
+    margin: 0 auto 2rem;
+}
+.destinations ul{
+    padding-left: 13% !important;
+    padding-right: 3.5rem !important;
+}
 .cta-boat {
     width: 35%;
 }
 }
 
 /***************************/
+/***************************/
 @media (min-width: 375px) and (max-width: 767px){
 .burger {    
-    display: block;
-    color: black !important; 
-    left: 49% !important;
+   color: #000 !important;   
+   left: 49% !important;
+}
+nav{
+   position: inherit;
+}  
+.close-search{
+   top: 6vh !important;
+   right: 5% !important; 
 }
 .houseboat-details h2 {
-   margin-top: -8%;
-   text-align: center;
-   font-weight: 600;
-   font-size: calc(2vw + 12px);
+    margin-top: -10%;
+    text-align: center;
+    font-weight: 600;
+    font-size: calc(2vw + 12px);
 }
 .houseboat-description p, .feature-card h4{
     text-align: center;
 }
 .feature-card li {
-    /* border: solid red 5px; */
     width: 65vw !important;
 }
 .cta-boat {
@@ -269,12 +212,13 @@ nav{
 }
 .destinations{
     text-align: center;
-}
-.destinations p{
-   font-size: calc(1.5rem - 5px);
+    margin-bottom: -5rem;
 }
 .destinations h3{
-    font-size: calc(1.5vw + .8rem)
+    font-size: calc(1.5vw + 1rem)
+}
+.destinations p{
+   font-size: calc(1.4rem - 3px);
 }
 .destinations ul {    
     list-style-type: none;

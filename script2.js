@@ -1,6 +1,6 @@
 // MENU BURGER ******************/
 document.addEventListener('DOMContentLoaded', function() {
-    const burger = document.querySelector('.burger');
+    const burger = document.querySelector('.burger');   
     const closeMenu = document.querySelector('.close-menu');
   
     burger.addEventListener('click', () => {
