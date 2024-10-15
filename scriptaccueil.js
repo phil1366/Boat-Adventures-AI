@@ -12,16 +12,18 @@
        document.body.classList.remove('menu-open');  // classe 'menu-open' pour fermer le menu
    });
 
-// SLIDE PHOTOS *******************/        
-   const galleryLink = document.querySelector('a[data-target="gallery"]');
+// SLIDE PHOTOS *******************/      
+
+// ciblage spécifique d'un lien avec data-target
+   const galleryLink = document.querySelector('a[data-target="gallery"]'); // attribut personnalisé
    const photoGallery = document.getElementById('photo-gallery');
 
    galleryLink.addEventListener('click', (e) => {
-       //Empêche le comportement par défaut du lien (ne pas naviguer vers autre page)
+       // Empêche le comportement par défaut du lien (ne pas naviguer vers autre page)
        e.preventDefault(); 
-       // Sélectionne tous les divs enfants directs de `contentArea` et les cache
+       // Cache tous les enfants directs de `contentArea` et les cache
        contentArea.querySelectorAll('> div').forEach(div => div.classList.add('hidden'));
-       // Affiche `photoGallery` en supprimant la classe `hidden`
+       // Affiche `photoGallery` en retirant la classe `hidden`
        photoGallery.classList.remove('hidden');
    });
 
@@ -35,20 +37,21 @@
         fullscreenImg.src = imgElement.src;
         
      // Création du bouton de fermeture
-        const closeBtn = document.createElement('span');
-        closeBtn.innerHTML = '&times;';
-        closeBtn.classList.add('close-btn');
+        const closeBtn = document.createElement('span'); // créé un span contenant le symbole
+        closeBtn.innerHTML = '&times;'; // X
+        closeBtn.classList.add('close-btn'); // ajoute une classe à X pour la styliser
         closeBtn.onclick = () => fullscreenContainer.remove();  // Ferme le conteneur 
         
     // Ajout de l'image et du bouton de fermeture au conteneur
         fullscreenContainer.appendChild(fullscreenImg);
         fullscreenContainer.appendChild(closeBtn);
-    // Ajout du conteneur au body du document
+
+    // Ajout du conteneur lié au body 
         document.body.appendChild(fullscreenContainer);
 
         setTimeout(() => {
-            fullscreenContainer.classList.add('active');
-        }, 10); // Lancer l'animation
+            fullscreenContainer.classList.add('active'); // active lance l'animation
+        }, 10); // Lancer l'animation avec délai de 10ms
     }
 
 

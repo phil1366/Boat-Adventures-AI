@@ -114,7 +114,7 @@ nav ul li a {
   cursor: pointer;
 }
 .search-container.active {
-  display: flex; 
+  display: flex; /* fait apparaitre le conteneur */
 }
 .search-input {
   background-color: var(--secondary-color); 

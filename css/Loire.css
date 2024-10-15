@@ -159,7 +159,7 @@ header {
   width: 100%;
 }
 
-/* cta ****************/
+/* CTA ****************/
 .cta-resa-loire{
   display: flex;
   justify-content: center;
@@ -184,29 +184,23 @@ header {
 main{
   margin: 0;
 }
-nav{
-  width: 100vw;
-  margin: 0 auto;
-}
 #menu li{
-  padding: 0;
   margin-right: 1px !important;   
 }
-#menu li a{
-  white-space: nowrap;
+#menu li a{ 
   font-size: calc(1.7vw + .36rem) !important;  
 }
 .search-container {       
   height: 29%;
 }
 .search-input{
-  top: 2.9rem !important;
+  top: 4.9rem !important;
 }
 .search-icon{    
-  left: 92vw !important;
+  left: 94vw !important;
 }
 .close-search {
-  top: 10.5vh !important;
+  top: 13.5vh !important;
 }
 .river-info{
   width: 95vw;
@@ -214,6 +208,9 @@ nav{
 }
 .river-description h2 {  
   margin-bottom: 1rem;
+}
+.river-description P{
+  text-align: center;
 }
 .river-gallery{
   display: flex;
@@ -226,9 +223,6 @@ nav{
   text-align: center;
   width: 80vw;
   margin: 0 auto;
-}
-.highlights{
-  flex-direction: column;  
 }
 .highlights h2{
   font-size: calc(.3vw + 20px) !important; 
@@ -246,6 +240,9 @@ nav{
   width: 90%;
   margin: 0 auto;
 }
+.cta-resa-loire{
+  margin-top: 2rem !important;
+}
 }
 
 /*************************/
@@ -261,10 +258,10 @@ nav{
   font-size: 2.3rem;
   margin-left: .5rem;
 }
-nav{
+/* nav{
   position: relative;
   top: 0;
-}
+} */
 #menu a{
   font-size: 1.4rem !important;
 }
@@ -273,11 +270,11 @@ nav{
   right: 2rem;
 }
 .search-container {    
-  top: -12.5vh;  
+  /* top: -12.5vh;   */
   height: 30%;
 }    
 .search-icon{       
-  left: 62% !important;  
+  /* left: 62% !important;   */
   top: 105% !important;
 }
 .close-search {    
@@ -293,6 +290,9 @@ nav{
 .river-description p{
   font-size: 1rem !important;
 }
+.river-gallery {
+  grid-template-columns: 1fr;
+}
 .river-gallery img { 
   height: 338px;
 }
@@ -303,17 +303,14 @@ nav{
   object-fit: cover;
   border-radius: 5px;
 }
-
-/* Fleuves ************************/
 .river-info {
   grid-template-columns: 1fr;
 }
 .river-info h2, .river-info p{
   text-align: center;
 }
-.river-gallery {
-  grid-template-columns: 1fr;
-}
+
+/* Highlights ************************/
 .highlights ul{  
   display: flex;
   flex-wrap: wrap;
@@ -322,7 +319,7 @@ nav{
   padding: 0;  
 }
 .highlights ul li{
-  text-align: center;
+  text-align: center !important;
   margin-right: 2rem;
 }
 .highlights ul li::marker{
@@ -330,6 +327,9 @@ nav{
 }
 .highlights img{
   width: 100%;    
+}
+label{
+  font-size: inherit;
 }
 .cta-resa-loire span{
   font-size: calc(1.8vw + .5rem) !important; 
